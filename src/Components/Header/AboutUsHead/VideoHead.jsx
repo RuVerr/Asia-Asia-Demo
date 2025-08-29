@@ -1,6 +1,6 @@
 import React from "react";
 import logoImg from "../../../images/bigLogo.png";
-import headVideo from "../../../Video/backgif3.mp4";
+import headVideo from "../../../images/headerBackgroundImages/backgif3.mp4";
 
 import "./videoHead.scss";
 import "./videoHeadMedia.scss";

@@ -44,6 +44,10 @@
   border: none;
 }
 
+.signInUpForm {
+  margin-top: clamp(54px, 8vw, 144px);
+}
+
 .signUpMail,
 .signUpVerifyButton,
 .signUpCreateAccountButton {

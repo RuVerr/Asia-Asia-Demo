@@ -2,7 +2,6 @@
 
 .ourTeamHead {
   @include bgConfig(100%, null); //width, height=null, repeat, position, size
-  background-image: url("../../../images/OurTeamImages/our-team-header.png");
   color: $neutral-light;
   text-align: center;
   .ourTeamTitle {

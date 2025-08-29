@@ -5,9 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../../Components/Buttons/Button";
 
 import "../authForms.scss";
+import "./signIn.scss";
 
 export default function SignIn() {
-
   const formik = useFormik({
     initialValues: {
       logIn: "",
@@ -17,7 +17,7 @@ export default function SignIn() {
       console.log("Отправка данных", values);
     }
   });
-  
+
   return (
     <main className="mainContent">
       <div className="signInForm">

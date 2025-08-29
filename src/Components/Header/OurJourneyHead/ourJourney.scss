@@ -2,7 +2,6 @@
 
 .ourJourneyHead {
   @include bgConfig(100%, null); //width, height=null, repeat, position, size
-  background-image: url("../../../images/OurJourneyImages/our-jurney-header.png");
   color: $neutral-light;
   text-align: center;
   .ourJourneyTitle {

@@ -12,7 +12,7 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/Asia-Asia-Demo/">
         <ScrollToTop />
         <App />
       </BrowserRouter>

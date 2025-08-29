@@ -59,7 +59,7 @@ export default function SignUp() {
                     {formik.errors.sendCode || <span>&nbsp;</span>}
                   </div>
                 </div>
-                <Button text={"Send code"} name={"signUpMail"} />
+                <Button type="submit" text={"Send code"} name={"signUpMail"} />
               </div>
             </form>
           </div>

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import bigLogo from "../../../images/bigLogo.png";
 import Button from "../../Buttons/Button";
 
+import headerBack from "../../../images/headerBackgroundImages/headerBack.png";
+
 import "./header.scss";
 import "./mediaHeader.scss";
 
@@ -13,13 +15,13 @@ const Header = () => {
   const user = JSON.parse(userString) || null;
 
   return (
-    <header className="homeHeader" style={{ content: "" }}>
+    <header className="homeHeader" style={{ backgroundImage: `url(${headerBack})`, content: "" }}>
       {user ? (
         <>
           <div className="bigLogo">
             <img style={{ display: "block" }} src={bigLogo} alt="Big Logo" />
           </div>
-          <div className="homeHeaderArrows"/>
+          <div className="homeHeaderArrows" />
         </>
       ) : (
         <>
