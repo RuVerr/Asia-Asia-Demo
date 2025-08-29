@@ -44,16 +44,18 @@
   border: none;
 }
 
-.signInUpForm {
-  margin-top: clamp(54px, 8vw, 144px);
-}
-
 .signUpMail,
 .signUpVerifyButton,
 .signUpCreateAccountButton {
   background-color: $stone-bg;
   color: $neutral-light;
   border: none;
+}
+
+.signInUpForm,
+.signUpMail,
+.signUpVerifyButton {
+  margin-top: clamp(54px, 8vw, 144px);
 }
 
 .headBtn {

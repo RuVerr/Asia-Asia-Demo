@@ -8,6 +8,7 @@ import "../authForms.scss";
 import "./signIn.scss";
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       logIn: "",
@@ -57,7 +58,7 @@ export default function SignIn() {
                   <Link className="forgetPassword">Forget password</Link>
                 </div>
 
-                <Button text={"Sign Up"} name={"signInUpForm"} />
+                <Button onClick={() => navigate("/sign-up")} text={"Sign Up"} name={"signInUpForm"} />
                 <Button text={"Sign In"} name={"signInInForm"} />
               </div>
             </form>
