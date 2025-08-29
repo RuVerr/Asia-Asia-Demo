@@ -1,0 +1,103 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.navigationMenu {
+  position: fixed;
+  top: -1px;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  padding: 0 $padding-md-v7;
+  width: 100%;
+  @include flex(space-between, center);
+  background-color: $neutral-light-bg;
+  .burgerNav {
+    display: none;
+  }
+  .burgerMenuList {
+    display: none;
+  }
+  .navigationMenuUser {
+    position: relative;
+    .userTitleAndImg {
+      @include flex(space-between, center, null, null, 16px);
+      font-family: $font-regular;
+      font-size: 16px;
+    }
+    .avatar {
+      width: 49px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .userSettings {
+      position: absolute;
+      right: 0;
+      width: 154px;
+      margin-top: 18px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 0px 18px -10px;
+      .userSettingsList {
+        .userSettingItem {
+          @include flex(null, null, null, null, 16px);
+          border-radius: inherit;
+          transition: 0.2s ease-out;
+          background-color: $neutral-light-bg;
+          padding: 11px 6px 8px 0;
+          .userSettingsLink {
+            width: 100%;
+            @include flex(space-between);
+            font-family: "Montserrat-Regular";
+            color: $sky;
+            .userSettingsLink {
+              padding-left: 16px;
+            }
+            .settingsSettingUserIconSVG {
+              stroke: #3b6fec;
+            }
+          }
+        }
+        .userSettingItem:hover {
+          transition: 0.2s ease-in;
+          background-color: $sky-bg;
+          .userSettingsLink {
+            color: $neutral-light;
+            .settingsSettingUserIconSVG {
+              stroke: $neutral-light;
+            }
+          }
+        }
+        .userSettingItem:nth-child(1) {
+          border-radius: 10px 10px 0 0;
+        }
+        .userSettingItem:nth-child(2) {
+          border-radius: 0;
+          border: 1px solid #f1f1f1;
+          border-left: 0;
+          border-right: 0;
+        }
+        .userSettingItem:nth-child(3) {
+          border-radius: 0 0 10px 10px;
+        }
+      }
+    }
+    .userSettings::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      clip-path: polygon(50% 30%, -5% 100%, 104% 100%);
+    }
+  }
+  .leftNav {
+    text-align: left;
+    @include flex(null, null, null, null, 25px);
+  }
+  .rightNav {
+    width: 50%;
+    @include flex(flex-end, null, null, null, 25px);
+  }
+}

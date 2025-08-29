@@ -1,0 +1,298 @@
+strict digraph "dependency-cruiser output"{
+    rankdir="LR" splines="true" overlap="false" nodesep="0.16" ranksep="0.18" fontname="Helvetica-bold" fontsize="9" style="rounded,bold,filled" fillcolor="#ffffff" compound="true"
+    node [shape="box" style="rounded, filled" height="0.2" color="black" fillcolor="#ffffcc" fontcolor="black" fontname="Helvetica" fontsize="9"]
+    edge [arrowhead="normal" arrowsize="0.6" penwidth="2.0" color="#00000033" fontname="Helvetica" fontsize="9"]
+
+    subgraph "cluster_node_modules" {label="node_modules" subgraph "cluster_node_modules/@reduxjs" {label="@reduxjs" "node_modules/@reduxjs/toolkit" [label=<toolkit> tooltip="toolkit" URL="https://www.npmjs.com/package/@reduxjs/toolkit" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] } }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/formik" [label=<formik> tooltip="formik" URL="https://www.npmjs.com/package/formik" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/react" [label=<react> tooltip="react" URL="https://www.npmjs.com/package/react" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/react-dom" [label=<react-dom> tooltip="react-dom" URL="https://www.npmjs.com/package/react-dom" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/react-redux" [label=<react-redux> tooltip="react-redux" URL="https://www.npmjs.com/package/react-redux" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/react-router-dom" [label=<react-router-dom> tooltip="react-router-dom" URL="https://www.npmjs.com/package/react-router-dom" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/swiper" [label=<swiper> tooltip="swiper" URL="https://www.npmjs.com/package/swiper" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_node_modules" {label="node_modules" "node_modules/yup" [label=<yup> tooltip="yup" URL="https://www.npmjs.com/package/yup" shape="box3d" fillcolor="#c40b0a1a" fontcolor="#c40b0a"] }
+    subgraph "cluster_src" {label="src" "src/App.jsx" [label=<App.jsx> tooltip="App.jsx" URL="src/App.jsx" fillcolor="#ffff77"] }
+    "src/App.jsx" -> "src/App.scss"
+    "src/App.jsx" -> "src/Routers/AppRouter.jsx"
+    subgraph "cluster_src" {label="src" "src/App.scss" [label=<App.scss> tooltip="App.scss" URL="src/App.scss" ] }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Buttons" {label="Buttons" "src/Components/Buttons/Button.jsx" [label=<Button.jsx> tooltip="Button.jsx" URL="src/Components/Buttons/Button.jsx" fillcolor="#ffff77"] } } }
+    "src/Components/Buttons/Button.jsx" -> "src/Components/Buttons/button.scss"
+    "src/Components/Buttons/Button.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Buttons" {label="Buttons" "src/Components/Buttons/button.scss" [label=<button.scss> tooltip="button.scss" URL="src/Components/Buttons/button.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Footer" {label="Footer" subgraph "cluster_src/Components/Footer/Footer" {label="Footer" "src/Components/Footer/Footer/Footer.jsx" [label=<Footer.jsx> tooltip="Footer.jsx" URL="src/Components/Footer/Footer/Footer.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/images/footerLogo.png"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/images/icons/fbIco.png"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/images/icons/instaIco.png"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/images/icons/sms.png"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/images/icons/twiterIco.png"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/Components/Footer/Footer/footer.scss"
+    "src/Components/Footer/Footer/Footer.jsx" -> "src/Components/Footer/Footer/mediaFooter.scss"
+    "src/Components/Footer/Footer/Footer.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Components/Footer/Footer/Footer.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Footer" {label="Footer" subgraph "cluster_src/Components/Footer/Footer" {label="Footer" "src/Components/Footer/Footer/footer.scss" [label=<footer.scss> tooltip="footer.scss" URL="src/Components/Footer/Footer/footer.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Footer" {label="Footer" subgraph "cluster_src/Components/Footer/Footer" {label="Footer" "src/Components/Footer/Footer/mediaFooter.scss" [label=<mediaFooter.scss> tooltip="mediaFooter.scss" URL="src/Components/Footer/Footer/mediaFooter.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Footer" {label="Footer" subgraph "cluster_src/Components/Footer/FooterMobile" {label="FooterMobile" "src/Components/Footer/FooterMobile/FooterMobile.jsx" [label=<FooterMobile.jsx> tooltip="FooterMobile.jsx" URL="src/Components/Footer/FooterMobile/FooterMobile.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/images/MobileIcon/FooterMobile/binance-icon.svg"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/images/MobileIcon/FooterMobile/facebook-icon.svg"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/images/MobileIcon/FooterMobile/instagram-icon.svg"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/images/MobileIcon/FooterMobile/telegram-icon.svg"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/images/MobileIcon/FooterMobile/youTube-icon.svg"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "src/Components/Footer/FooterMobile/footerMobile.scss"
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Components/Footer/FooterMobile/FooterMobile.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Footer" {label="Footer" subgraph "cluster_src/Components/Footer/FooterMobile" {label="FooterMobile" "src/Components/Footer/FooterMobile/footerMobile.scss" [label=<footerMobile.scss> tooltip="footerMobile.scss" URL="src/Components/Footer/FooterMobile/footerMobile.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/AboutUsHead" {label="AboutUsHead" "src/Components/Header/AboutUsHead/VideoHead.jsx" [label=<VideoHead.jsx> tooltip="VideoHead.jsx" URL="src/Components/Header/AboutUsHead/VideoHead.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Header/AboutUsHead/VideoHead.jsx" -> "src/images/bigLogo.png"
+    "src/Components/Header/AboutUsHead/VideoHead.jsx" -> "src/Video/backgif3.mp4"
+    "src/Components/Header/AboutUsHead/VideoHead.jsx" -> "src/Components/Header/AboutUsHead/videoHead.scss"
+    "src/Components/Header/AboutUsHead/VideoHead.jsx" -> "src/Components/Header/AboutUsHead/videoHeadMedia.scss"
+    "src/Components/Header/AboutUsHead/VideoHead.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/AboutUsHead" {label="AboutUsHead" "src/Components/Header/AboutUsHead/videoHead.scss" [label=<videoHead.scss> tooltip="videoHead.scss" URL="src/Components/Header/AboutUsHead/videoHead.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/AboutUsHead" {label="AboutUsHead" "src/Components/Header/AboutUsHead/videoHeadMedia.scss" [label=<videoHeadMedia.scss> tooltip="videoHeadMedia.scss" URL="src/Components/Header/AboutUsHead/videoHeadMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/HomeHead" {label="HomeHead" "src/Components/Header/HomeHead/Header.jsx" [label=<Header.jsx> tooltip="Header.jsx" URL="src/Components/Header/HomeHead/Header.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Header/HomeHead/Header.jsx" -> "src/images/bigLogo.png"
+    "src/Components/Header/HomeHead/Header.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Components/Header/HomeHead/Header.jsx" -> "src/Components/Header/HomeHead/header.scss"
+    "src/Components/Header/HomeHead/Header.jsx" -> "src/Components/Header/HomeHead/mediaHeader.scss"
+    "src/Components/Header/HomeHead/Header.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/HomeHead" {label="HomeHead" "src/Components/Header/HomeHead/header.scss" [label=<header.scss> tooltip="header.scss" URL="src/Components/Header/HomeHead/header.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/HomeHead" {label="HomeHead" "src/Components/Header/HomeHead/mediaHeader.scss" [label=<mediaHeader.scss> tooltip="mediaHeader.scss" URL="src/Components/Header/HomeHead/mediaHeader.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/InvestHead" {label="InvestHead" "src/Components/Header/InvestHead/InvestHead.jsx" [label=<InvestHead.jsx> tooltip="InvestHead.jsx" URL="src/Components/Header/InvestHead/InvestHead.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Header/InvestHead/InvestHead.jsx" -> "src/Components/Header/InvestHead/investHead.scss"
+    "src/Components/Header/InvestHead/InvestHead.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/InvestHead" {label="InvestHead" "src/Components/Header/InvestHead/investHead.scss" [label=<investHead.scss> tooltip="investHead.scss" URL="src/Components/Header/InvestHead/investHead.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/OurJourneyHead" {label="OurJourneyHead" "src/Components/Header/OurJourneyHead/OurJourney.jsx" [label=<OurJourney.jsx> tooltip="OurJourney.jsx" URL="src/Components/Header/OurJourneyHead/OurJourney.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Header/OurJourneyHead/OurJourney.jsx" -> "src/Components/Header/OurJourneyHead/ourJourney.scss"
+    "src/Components/Header/OurJourneyHead/OurJourney.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/OurJourneyHead" {label="OurJourneyHead" "src/Components/Header/OurJourneyHead/ourJourney.scss" [label=<ourJourney.scss> tooltip="ourJourney.scss" URL="src/Components/Header/OurJourneyHead/ourJourney.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/OurTeamHead" {label="OurTeamHead" "src/Components/Header/OurTeamHead/OurTeamHead.jsx" [label=<OurTeamHead.jsx> tooltip="OurTeamHead.jsx" URL="src/Components/Header/OurTeamHead/OurTeamHead.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Header/OurTeamHead/OurTeamHead.jsx" -> "src/Components/Header/OurTeamHead/ourTeamHead.scss"
+    "src/Components/Header/OurTeamHead/OurTeamHead.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Header" {label="Header" subgraph "cluster_src/Components/Header/OurTeamHead" {label="OurTeamHead" "src/Components/Header/OurTeamHead/ourTeamHead.scss" [label=<ourTeamHead.scss> tooltip="ourTeamHead.scss" URL="src/Components/Header/OurTeamHead/ourTeamHead.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavBar" {label="NavBar" "src/Components/Navigation/NavBar/NavBar.jsx" [label=<NavBar.jsx> tooltip="NavBar.jsx" URL="src/Components/Navigation/NavBar/NavBar.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Navigation/NavBar/NavBar.jsx" -> "src/Components/Navigation/NavBar/navBar.scss"
+    "src/Components/Navigation/NavBar/NavBar.jsx" -> "src/Components/Navigation/NavBar/NavBarMedia.scss"
+    "src/Components/Navigation/NavBar/NavBar.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Components/Navigation/NavBar/NavBar.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavBar" {label="NavBar" "src/Components/Navigation/NavBar/NavBarMedia.scss" [label=<NavBarMedia.scss> tooltip="NavBarMedia.scss" URL="src/Components/Navigation/NavBar/NavBarMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavBar" {label="NavBar" "src/Components/Navigation/NavBar/navBar.scss" [label=<navBar.scss> tooltip="navBar.scss" URL="src/Components/Navigation/NavBar/navBar.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenu" {label="NavigationMenu" "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" [label=<NavigationMenu.jsx> tooltip="NavigationMenu.jsx" URL="src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/Hooks/useIsAuthPage.jsx"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/images/logo.png"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/Store/authSlice/authSlice.js"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/Components/Navigation/NavigationMenu/navigationMenu.scss"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "src/Components/Navigation/NavigationMenu/navigationMenuMedia.scss"
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenu" {label="NavigationMenu" "src/Components/Navigation/NavigationMenu/navigationMenu.scss" [label=<navigationMenu.scss> tooltip="navigationMenu.scss" URL="src/Components/Navigation/NavigationMenu/navigationMenu.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenu" {label="NavigationMenu" "src/Components/Navigation/NavigationMenu/navigationMenuMedia.scss" [label=<navigationMenuMedia.scss> tooltip="navigationMenuMedia.scss" URL="src/Components/Navigation/NavigationMenu/navigationMenuMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenuMobile" {label="NavigationMenuMobile" "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" [label=<NavigationMenuMobile.jsx> tooltip="NavigationMenuMobile.jsx" URL="src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" fillcolor="#ffff77"] } } } }
+    "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" -> "src/Components/Navigation/NavigationMenuMobile/navigationMenuMobile.scss"
+    "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" -> "src/Components/Navigation/NavigationMenuMobile/navigationMenuMobileMedia.scss"
+    "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenuMobile" {label="NavigationMenuMobile" "src/Components/Navigation/NavigationMenuMobile/navigationMenuMobile.scss" [label=<navigationMenuMobile.scss> tooltip="navigationMenuMobile.scss" URL="src/Components/Navigation/NavigationMenuMobile/navigationMenuMobile.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/Navigation" {label="Navigation" subgraph "cluster_src/Components/Navigation/NavigationMenuMobile" {label="NavigationMenuMobile" "src/Components/Navigation/NavigationMenuMobile/navigationMenuMobileMedia.scss" [label=<navigationMenuMobileMedia.scss> tooltip="navigationMenuMobileMedia.scss" URL="src/Components/Navigation/NavigationMenuMobile/navigationMenuMobileMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/RecomendationCard" {label="RecomendationCard" "src/Components/RecomendationCard/RecomendationCard.jsx" [label=<RecomendationCard.jsx> tooltip="RecomendationCard.jsx" URL="src/Components/RecomendationCard/RecomendationCard.jsx" fillcolor="#ffff77"] } } }
+    "src/Components/RecomendationCard/RecomendationCard.jsx" -> "src/Components/RecomendationCard/recomendationCard.scss"
+    "src/Components/RecomendationCard/RecomendationCard.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Components" {label="Components" subgraph "cluster_src/Components/RecomendationCard" {label="RecomendationCard" "src/Components/RecomendationCard/recomendationCard.scss" [label=<recomendationCard.scss> tooltip="recomendationCard.scss" URL="src/Components/RecomendationCard/recomendationCard.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Hooks" {label="Hooks" "src/Hooks/useIsAuthPage.jsx" [label=<useIsAuthPage.jsx> tooltip="useIsAuthPage.jsx" URL="src/Hooks/useIsAuthPage.jsx" fillcolor="#ffff77"] } }
+    "src/Hooks/useIsAuthPage.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Hooks/useIsAuthPage.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Hooks" {label="Hooks" "src/Hooks/useScreenResize.jsx" [label=<useScreenResize.jsx> tooltip="useScreenResize.jsx" URL="src/Hooks/useScreenResize.jsx" fillcolor="#ffff77"] } }
+    "src/Hooks/useScreenResize.jsx" -> "src/Store/screenSlice/screenSlice.js"
+    "src/Hooks/useScreenResize.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Hooks/useScreenResize.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/AboutUs" {label="AboutUs" "src/Pages/AboutUs/AboutUs.jsx" [label=<AboutUs.jsx> tooltip="AboutUs.jsx" URL="src/Pages/AboutUs/AboutUs.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/AboutUs/AboutUs.jsx" -> "src/Pages/AboutUs/aboutUs.scss"
+    "src/Pages/AboutUs/AboutUs.jsx" -> "src/Pages/AboutUs/aboutUsMedia.scss"
+    "src/Pages/AboutUs/AboutUs.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/AboutUs" {label="AboutUs" "src/Pages/AboutUs/aboutUs.scss" [label=<aboutUs.scss> tooltip="aboutUs.scss" URL="src/Pages/AboutUs/aboutUs.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/AboutUs" {label="AboutUs" "src/Pages/AboutUs/aboutUsMedia.scss" [label=<aboutUsMedia.scss> tooltip="aboutUsMedia.scss" URL="src/Pages/AboutUs/aboutUsMedia.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/AboutUs" {label="AboutUs" "src/Pages/Home/AboutUs/AboutUs.jsx" [label=<AboutUs.jsx> tooltip="AboutUs.jsx" URL="src/Pages/Home/AboutUs/AboutUs.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/AboutUs/AboutUs.jsx" -> "src/Pages/Home/AboutUs/aboutUs.scss"
+    "src/Pages/Home/AboutUs/AboutUs.jsx" -> "src/Pages/Home/AboutUs/aboutUsMedia.scss"
+    "src/Pages/Home/AboutUs/AboutUs.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/AboutUs" {label="AboutUs" "src/Pages/Home/AboutUs/aboutUs.scss" [label=<aboutUs.scss> tooltip="aboutUs.scss" URL="src/Pages/Home/AboutUs/aboutUs.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/AboutUs" {label="AboutUs" "src/Pages/Home/AboutUs/aboutUsMedia.scss" [label=<aboutUsMedia.scss> tooltip="aboutUsMedia.scss" URL="src/Pages/Home/AboutUs/aboutUsMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" "src/Pages/Home/Home.jsx" [label=<Home.jsx> tooltip="Home.jsx" URL="src/Pages/Home/Home.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/AboutUs/AboutUs.jsx"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/home.scss"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/Location/Location.jsx"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/OurBenefist/Benefists.jsx"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/OurPartner/Partner.jsx"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/Recomendations/Recomendations.jsx"
+    "src/Pages/Home/Home.jsx" -> "src/Pages/Home/Revievs/Reviews.jsx"
+    "src/Pages/Home/Home.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Location" {label="Location" "src/Pages/Home/Location/Location.jsx" [label=<Location.jsx> tooltip="Location.jsx" URL="src/Pages/Home/Location/Location.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/Location/Location.jsx" -> "src/data/datas.js"
+    "src/Pages/Home/Location/Location.jsx" -> "src/images/icons/location.png"
+    "src/Pages/Home/Location/Location.jsx" -> "src/Pages/Home/Location/location.scss"
+    "src/Pages/Home/Location/Location.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Location" {label="Location" "src/Pages/Home/Location/location.scss" [label=<location.scss> tooltip="location.scss" URL="src/Pages/Home/Location/location.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurBenefist" {label="OurBenefist" "src/Pages/Home/OurBenefist/Benefists.jsx" [label=<Benefists.jsx> tooltip="Benefists.jsx" URL="src/Pages/Home/OurBenefist/Benefists.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/OurBenefist/Benefists.jsx" -> "src/data/datas.js"
+    "src/Pages/Home/OurBenefist/Benefists.jsx" -> "src/Pages/Home/OurBenefist/benefists.scss"
+    "src/Pages/Home/OurBenefist/Benefists.jsx" -> "src/Pages/Home/OurBenefist/benefistsMedia.scss"
+    "src/Pages/Home/OurBenefist/Benefists.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurBenefist" {label="OurBenefist" "src/Pages/Home/OurBenefist/benefists.scss" [label=<benefists.scss> tooltip="benefists.scss" URL="src/Pages/Home/OurBenefist/benefists.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurBenefist" {label="OurBenefist" "src/Pages/Home/OurBenefist/benefistsMedia.scss" [label=<benefistsMedia.scss> tooltip="benefistsMedia.scss" URL="src/Pages/Home/OurBenefist/benefistsMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurPartner" {label="OurPartner" "src/Pages/Home/OurPartner/Partner.jsx" [label=<Partner.jsx> tooltip="Partner.jsx" URL="src/Pages/Home/OurPartner/Partner.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/OurPartner/Partner.jsx" -> "src/data/datas.js"
+    "src/Pages/Home/OurPartner/Partner.jsx" -> "src/Pages/Home/OurPartner/partner.scss"
+    "src/Pages/Home/OurPartner/Partner.jsx" -> "src/Pages/Home/OurPartner/partnerMedia.scss"
+    "src/Pages/Home/OurPartner/Partner.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurPartner" {label="OurPartner" "src/Pages/Home/OurPartner/partner.scss" [label=<partner.scss> tooltip="partner.scss" URL="src/Pages/Home/OurPartner/partner.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/OurPartner" {label="OurPartner" "src/Pages/Home/OurPartner/partnerMedia.scss" [label=<partnerMedia.scss> tooltip="partnerMedia.scss" URL="src/Pages/Home/OurPartner/partnerMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Recomendations" {label="Recomendations" "src/Pages/Home/Recomendations/Recomendations.jsx" [label=<Recomendations.jsx> tooltip="Recomendations.jsx" URL="src/Pages/Home/Recomendations/Recomendations.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "src/Components/RecomendationCard/RecomendationCard.jsx"
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "src/data/datas.js"
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "src/Pages/Home/Recomendations/recomendations.scss"
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "src/Pages/Home/Recomendations/recomendationsMedia.scss"
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/Home/Recomendations/Recomendations.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Recomendations" {label="Recomendations" "src/Pages/Home/Recomendations/recomendations.scss" [label=<recomendations.scss> tooltip="recomendations.scss" URL="src/Pages/Home/Recomendations/recomendations.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Recomendations" {label="Recomendations" "src/Pages/Home/Recomendations/recomendationsMedia.scss" [label=<recomendationsMedia.scss> tooltip="recomendationsMedia.scss" URL="src/Pages/Home/Recomendations/recomendationsMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" subgraph "cluster_src/Pages/Home/Revievs/ReviewSwiper" {label="ReviewSwiper" "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" [label=<ReviewSwiper.jsx> tooltip="ReviewSwiper.jsx" URL="src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" fillcolor="#ffff77"] } } } } }
+    "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" -> "src/data/datas.js"
+    "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" -> "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx"
+    "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" -> "src/Pages/Home/Revievs/ReviewSwiper/reviewSwiper.scss"
+    "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx" -> "node_modules/swiper" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" subgraph "cluster_src/Pages/Home/Revievs/ReviewSwiper" {label="ReviewSwiper" "src/Pages/Home/Revievs/ReviewSwiper/reviewSwiper.scss" [label=<reviewSwiper.scss> tooltip="reviewSwiper.scss" URL="src/Pages/Home/Revievs/ReviewSwiper/reviewSwiper.scss" ] } } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" "src/Pages/Home/Revievs/Reviews.jsx" [label=<Reviews.jsx> tooltip="Reviews.jsx" URL="src/Pages/Home/Revievs/Reviews.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/Home/Revievs/Reviews.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Pages/Home/Revievs/Reviews.jsx" -> "src/Pages/Home/Revievs/reviews.scss"
+    "src/Pages/Home/Revievs/Reviews.jsx" -> "src/Pages/Home/Revievs/reviewsMedia.scss"
+    "src/Pages/Home/Revievs/Reviews.jsx" -> "src/Pages/Home/Revievs/ReviewSwiper/ReviewSwiper.jsx"
+    "src/Pages/Home/Revievs/Reviews.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" subgraph "cluster_src/Pages/Home/Revievs/SwiperUserCard" {label="SwiperUserCard" "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" [label=<SwiperUserCard.jsx> tooltip="SwiperUserCard.jsx" URL="src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" fillcolor="#ffff77"] } } } } }
+    "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" -> "src/images/icons/emptyStar.png"
+    "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" -> "src/images/icons/fullStar.png"
+    "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" -> "src/Pages/Home/Revievs/SwiperUserCard/swiperUserCard.scss"
+    "src/Pages/Home/Revievs/SwiperUserCard/SwiperUserCard.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" subgraph "cluster_src/Pages/Home/Revievs/SwiperUserCard" {label="SwiperUserCard" "src/Pages/Home/Revievs/SwiperUserCard/swiperUserCard.scss" [label=<swiperUserCard.scss> tooltip="swiperUserCard.scss" URL="src/Pages/Home/Revievs/SwiperUserCard/swiperUserCard.scss" ] } } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" "src/Pages/Home/Revievs/reviews.scss" [label=<reviews.scss> tooltip="reviews.scss" URL="src/Pages/Home/Revievs/reviews.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" subgraph "cluster_src/Pages/Home/Revievs" {label="Revievs" "src/Pages/Home/Revievs/reviewsMedia.scss" [label=<reviewsMedia.scss> tooltip="reviewsMedia.scss" URL="src/Pages/Home/Revievs/reviewsMedia.scss" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Home" {label="Home" "src/Pages/Home/home.scss" [label=<home.scss> tooltip="home.scss" URL="src/Pages/Home/home.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Invest" {label="Invest" "src/Pages/Invest/Invest.jsx" [label=<Invest.jsx> tooltip="Invest.jsx" URL="src/Pages/Invest/Invest.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/Invest/Invest.jsx" -> "src/Components/RecomendationCard/RecomendationCard.jsx"
+    "src/Pages/Invest/Invest.jsx" -> "src/data/datas.js"
+    "src/Pages/Invest/Invest.jsx" -> "src/Hooks/useScreenResize.jsx"
+    "src/Pages/Invest/Invest.jsx" -> "src/Pages/Invest/invest.scss"
+    "src/Pages/Invest/Invest.jsx" -> "src/Pages/Invest/investMedia.scss"
+    "src/Pages/Invest/Invest.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/Invest/Invest.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Invest" {label="Invest" "src/Pages/Invest/invest.scss" [label=<invest.scss> tooltip="invest.scss" URL="src/Pages/Invest/invest.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Invest" {label="Invest" "src/Pages/Invest/investMedia.scss" [label=<investMedia.scss> tooltip="investMedia.scss" URL="src/Pages/Invest/investMedia.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/Layout" {label="Layout" "src/Pages/Layout/Layout.jsx" [label=<Layout.jsx> tooltip="Layout.jsx" URL="src/Pages/Layout/Layout.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Footer/Footer/Footer.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Footer/FooterMobile/FooterMobile.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Header/AboutUsHead/VideoHead.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Header/HomeHead/Header.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Header/InvestHead/InvestHead.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Header/OurJourneyHead/OurJourney.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Header/OurTeamHead/OurTeamHead.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Navigation/NavBar/NavBar.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Navigation/NavigationMenu/NavigationMenu.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Components/Navigation/NavigationMenuMobile/NavigationMenuMobile.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Hooks/useIsAuthPage.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "src/Hooks/useScreenResize.jsx"
+    "src/Pages/Layout/Layout.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/Layout/Layout.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    "src/Pages/Layout/Layout.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/OurJourney" {label="OurJourney" "src/Pages/OurJourney/OurJourney.jsx" [label=<OurJourney.jsx> tooltip="OurJourney.jsx" URL="src/Pages/OurJourney/OurJourney.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/OurJourney/OurJourney.jsx" -> "src/data/datas.js"
+    "src/Pages/OurJourney/OurJourney.jsx" -> "src/Pages/OurJourney/ourJourney.scss"
+    "src/Pages/OurJourney/OurJourney.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/OurJourney" {label="OurJourney" "src/Pages/OurJourney/ourJourney.scss" [label=<ourJourney.scss> tooltip="ourJourney.scss" URL="src/Pages/OurJourney/ourJourney.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/OurTeam" {label="OurTeam" "src/Pages/OurTeam/OurTeam.jsx" [label=<OurTeam.jsx> tooltip="OurTeam.jsx" URL="src/Pages/OurTeam/OurTeam.jsx" fillcolor="#ffff77"] } } }
+    "src/Pages/OurTeam/OurTeam.jsx" -> "src/data/datas.js"
+    "src/Pages/OurTeam/OurTeam.jsx" -> "src/Pages/OurTeam/ourTeam.scss"
+    "src/Pages/OurTeam/OurTeam.jsx" -> "node_modules/react" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/OurTeam" {label="OurTeam" "src/Pages/OurTeam/ourTeam.scss" [label=<ourTeam.scss> tooltip="ourTeam.scss" URL="src/Pages/OurTeam/ourTeam.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/authForms" {label="authForms" subgraph "cluster_src/Pages/authForms/CreateAccount" {label="CreateAccount" "src/Pages/authForms/CreateAccount/CreateAccount.jsx" [label=<CreateAccount.jsx> tooltip="CreateAccount.jsx" URL="src/Pages/authForms/CreateAccount/CreateAccount.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "src/images/authFormsImg/authFormsIcon/success.svg"
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "src/Pages/authForms/authForms.scss"
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "node_modules/formik" [penwidth="1.0"]
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    "src/Pages/authForms/CreateAccount/CreateAccount.jsx" -> "node_modules/yup" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/authForms" {label="authForms" subgraph "cluster_src/Pages/authForms/SignIn" {label="SignIn" "src/Pages/authForms/SignIn/SignIn.jsx" [label=<SignIn.jsx> tooltip="SignIn.jsx" URL="src/Pages/authForms/SignIn/SignIn.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/authForms/SignIn/SignIn.jsx" -> "src/Pages/authForms/authForms.scss"
+    "src/Pages/authForms/SignIn/SignIn.jsx" -> "node_modules/formik" [penwidth="1.0"]
+    "src/Pages/authForms/SignIn/SignIn.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/authForms/SignIn/SignIn.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/authForms" {label="authForms" subgraph "cluster_src/Pages/authForms/SignUp" {label="SignUp" "src/Pages/authForms/SignUp/SignUp.jsx" [label=<SignUp.jsx> tooltip="SignUp.jsx" URL="src/Pages/authForms/SignUp/SignUp.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/authForms/SignUp/SignUp.jsx" -> "src/Pages/authForms/authForms.scss"
+    "src/Pages/authForms/SignUp/SignUp.jsx" -> "node_modules/formik" [penwidth="1.0"]
+    "src/Pages/authForms/SignUp/SignUp.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/authForms/SignUp/SignUp.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    "src/Pages/authForms/SignUp/SignUp.jsx" -> "node_modules/yup" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/authForms" {label="authForms" subgraph "cluster_src/Pages/authForms/VereficationCode" {label="VereficationCode" "src/Pages/authForms/VereficationCode/VereficationCode.jsx" [label=<VereficationCode.jsx> tooltip="VereficationCode.jsx" URL="src/Pages/authForms/VereficationCode/VereficationCode.jsx" fillcolor="#ffff77"] } } } }
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "src/Components/Buttons/Button.jsx"
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "src/images/authFormsImg/authFormsIcon/success.svg"
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "src/Pages/authForms/authForms.scss"
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "node_modules/formik" [penwidth="1.0"]
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    "src/Pages/authForms/VereficationCode/VereficationCode.jsx" -> "node_modules/yup" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Pages" {label="Pages" subgraph "cluster_src/Pages/authForms" {label="authForms" "src/Pages/authForms/authForms.scss" [label=<authForms.scss> tooltip="authForms.scss" URL="src/Pages/authForms/authForms.scss" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Routers" {label="Routers" "src/Routers/AppRouter.jsx" [label=<AppRouter.jsx> tooltip="AppRouter.jsx" URL="src/Routers/AppRouter.jsx" fillcolor="#ffff77"] } }
+    "src/Routers/AppRouter.jsx" -> "src/Hooks/useIsAuthPage.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Hooks/useScreenResize.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/AboutUs/AboutUs.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/authForms/CreateAccount/CreateAccount.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/authForms/SignIn/SignIn.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/authForms/SignUp/SignUp.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/authForms/VereficationCode/VereficationCode.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/Home/Home.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/Invest/Invest.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/Layout/Layout.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/OurJourney/OurJourney.jsx"
+    "src/Routers/AppRouter.jsx" -> "src/Pages/OurTeam/OurTeam.jsx"
+    "src/Routers/AppRouter.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/Routers/AppRouter.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    "src/Routers/AppRouter.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Store" {label="Store" subgraph "cluster_src/Store/authSlice" {label="authSlice" "src/Store/authSlice/authSlice.js" [label=<authSlice.js> tooltip="authSlice.js" URL="src/Store/authSlice/authSlice.js" ] } } }
+    "src/Store/authSlice/authSlice.js" -> "node_modules/@reduxjs/toolkit" [penwidth="1.0"]
+    "src/Store/authSlice/authSlice.js" -> "node_modules/react-router-dom" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Store" {label="Store" subgraph "cluster_src/Store/screenSlice" {label="screenSlice" "src/Store/screenSlice/screenSlice.js" [label=<screenSlice.js> tooltip="screenSlice.js" URL="src/Store/screenSlice/screenSlice.js" ] } } }
+    "src/Store/screenSlice/screenSlice.js" -> "node_modules/@reduxjs/toolkit" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Store" {label="Store" "src/Store/store.js" [label=<store.js> tooltip="store.js" URL="src/Store/store.js" ] } }
+    "src/Store/store.js" -> "src/Store/authSlice/authSlice.js"
+    "src/Store/store.js" -> "src/Store/screenSlice/screenSlice.js"
+    "src/Store/store.js" -> "node_modules/@reduxjs/toolkit" [penwidth="1.0"]
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/Video" {label="Video" "src/Video/backgif3.mp4" [label=<backgif3.mp4> tooltip="backgif3.mp4" URL="src/Video/backgif3.mp4" ] } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/data" {label="data" "src/data/datas.js" [label=<datas.js> tooltip="datas.js" URL="src/data/datas.js" ] } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/MobileIcon" {label="MobileIcon" subgraph "cluster_src/images/MobileIcon/FooterMobile" {label="FooterMobile" "src/images/MobileIcon/FooterMobile/binance-icon.svg" [label=<binance-icon.svg> tooltip="binance-icon.svg" URL="src/images/MobileIcon/FooterMobile/binance-icon.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/MobileIcon" {label="MobileIcon" subgraph "cluster_src/images/MobileIcon/FooterMobile" {label="FooterMobile" "src/images/MobileIcon/FooterMobile/facebook-icon.svg" [label=<facebook-icon.svg> tooltip="facebook-icon.svg" URL="src/images/MobileIcon/FooterMobile/facebook-icon.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/MobileIcon" {label="MobileIcon" subgraph "cluster_src/images/MobileIcon/FooterMobile" {label="FooterMobile" "src/images/MobileIcon/FooterMobile/instagram-icon.svg" [label=<instagram-icon.svg> tooltip="instagram-icon.svg" URL="src/images/MobileIcon/FooterMobile/instagram-icon.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/MobileIcon" {label="MobileIcon" subgraph "cluster_src/images/MobileIcon/FooterMobile" {label="FooterMobile" "src/images/MobileIcon/FooterMobile/telegram-icon.svg" [label=<telegram-icon.svg> tooltip="telegram-icon.svg" URL="src/images/MobileIcon/FooterMobile/telegram-icon.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/MobileIcon" {label="MobileIcon" subgraph "cluster_src/images/MobileIcon/FooterMobile" {label="FooterMobile" "src/images/MobileIcon/FooterMobile/youTube-icon.svg" [label=<youTube-icon.svg> tooltip="youTube-icon.svg" URL="src/images/MobileIcon/FooterMobile/youTube-icon.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/authFormsImg" {label="authFormsImg" subgraph "cluster_src/images/authFormsImg/authFormsIcon" {label="authFormsIcon" "src/images/authFormsImg/authFormsIcon/success.svg" [label=<success.svg> tooltip="success.svg" URL="src/images/authFormsImg/authFormsIcon/success.svg" ] } } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" "src/images/bigLogo.png" [label=<bigLogo.png> tooltip="bigLogo.png" URL="src/images/bigLogo.png" ] } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" "src/images/footerLogo.png" [label=<footerLogo.png> tooltip="footerLogo.png" URL="src/images/footerLogo.png" ] } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/emptyStar.png" [label=<emptyStar.png> tooltip="emptyStar.png" URL="src/images/icons/emptyStar.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/fbIco.png" [label=<fbIco.png> tooltip="fbIco.png" URL="src/images/icons/fbIco.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/fullStar.png" [label=<fullStar.png> tooltip="fullStar.png" URL="src/images/icons/fullStar.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/instaIco.png" [label=<instaIco.png> tooltip="instaIco.png" URL="src/images/icons/instaIco.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/location.png" [label=<location.png> tooltip="location.png" URL="src/images/icons/location.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/sms.png" [label=<sms.png> tooltip="sms.png" URL="src/images/icons/sms.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" subgraph "cluster_src/images/icons" {label="icons" "src/images/icons/twiterIco.png" [label=<twiterIco.png> tooltip="twiterIco.png" URL="src/images/icons/twiterIco.png" ] } } }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/images" {label="images" "src/images/logo.png" [label=<logo.png> tooltip="logo.png" URL="src/images/logo.png" ] } }
+    subgraph "cluster_src" {label="src" "src/index.scss" [label=<index.scss> tooltip="index.scss" URL="src/index.scss" ] }
+    subgraph "cluster_src" {label="src" "src/main.jsx" [label=<main.jsx> tooltip="main.jsx" URL="src/main.jsx" fillcolor="#ffff77"] }
+    "src/main.jsx" -> "src/App.jsx"
+    "src/main.jsx" -> "src/index.scss"
+    "src/main.jsx" -> "src/Store/store.js"
+    "src/main.jsx" -> "node_modules/react" [penwidth="1.0"]
+    "src/main.jsx" -> "node_modules/react-dom" [penwidth="1.0"]
+    "src/main.jsx" -> "node_modules/react-redux" [penwidth="1.0"]
+    "src/main.jsx" -> "node_modules/react-router-dom" [penwidth="1.0"]
+}

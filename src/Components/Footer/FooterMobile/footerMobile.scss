@@ -1,0 +1,47 @@
+@use "../../../GlobalStyle/variables" as *;
+
+.mobileFooterContent {
+  padding: 24px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  .payment,
+  .helpCenter {
+    font-family: "Montserrat-Regular";
+    font-size: $font-size-lg-v3;
+  }
+
+  .boxTitle {
+    margin-bottom: 16px;
+  }
+
+  .paymentBox,
+  .helpCenterBox {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    a{
+      display: contents;
+      color: #000000;
+    }
+  }
+  .paymentTitle {
+    text-transform: uppercase;
+    font-family: "Montserrat-Medium";
+    color: #f0b90b;
+    font-size: $font-size-md-v2;
+  }
+  .socialNetwork {
+    margin-top: $margin-xs-6;
+    grid-row: 2;
+    font-family: "Montserrat-Regular";
+    .socialNetworkTitle {
+      font-size: $font-size-lg-v3;
+    }
+    .socialNetworkBox {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.aboutUsHome {
+  width: 100%;
+  display: none;
+  .aboutUsHomeContent {
+    max-width: 361px;
+    .aboutUsHomeTitle {
+      font-family: $font-medium;
+      font-size: $font-size-xl-v4;
+    }
+    .pAoutUsHome {
+      font-family: $font-regular;
+      font-size: $font-size-lg-v3;
+    }
+  }
+}

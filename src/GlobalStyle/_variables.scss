@@ -1,0 +1,94 @@
+$font-size-lg: clamp(14px, 2vw, 18px);
+$font-size-lg-v2: clamp(7px, 1.5vw, 14px);
+$font-size-lg-v3: clamp(14px, 2vw, 15px);
+$font-size-md: clamp(12px, 2vw, 16px);
+$font-size-md-v2: clamp(14px, 2vw, 17px);
+$font-size-md-3: clamp(14px, 2vw, 18px);
+$font-size-xl: clamp(16px, 2vw, 20px);
+$font-size-xl-v2: clamp(15px, 4vw, 22px);
+$font-size-xl-v3: clamp(12px, 8vw, 24px);
+$font-size-xl-v4: clamp(18px, 4vw, 22px);
+$font-size-xl-v5: clamp(17px, 5vw, 32px);
+$font-size-xxl: clamp(24px, 4vw, 36px);
+
+$space-between-elements: clamp(32px, 8vw, 48px);
+$space-md: clamp(14px, 1vw, 20px);
+$space-md-v2: clamp(8px, 2vw, 25px);
+$space-md-v3: clamp(15px, 9vw, 40px);
+$space-md-v4: clamp(8px, 1vw, 12px);
+$space-md-v5: clamp(8px, 2vw, 16px);
+$space-lg: clamp(18px, 9vw, 30px);
+$space-lg-v2: clamp(42px, 6vw, 52px);
+$space-lg-v3: clamp(10px, 6vw, 64px);
+$space-lg-4: clamp(18px, 9vw, 32px);
+$space-xl: clamp(70px, 10vw, 136px);
+$space-xxxl: clamp(1px, 11vw, 175px);
+
+$width-lg: clamp(25px, 15vw, 74px);
+$width-xxl: clamp(10px, 40vw, 643px);
+
+$padding-sm: clamp(8px, 7vw, 12px);
+$padding-sm-v2: clamp(8px, 7vw, 14px);
+$padding-md: clamp(14px, 7vw, 16px);
+$padding-md-2: clamp(8px, 2vw, 24px);
+$padding-md-v2: clamp(20px, 15vw, 74px);
+$padding-md-v3: clamp(20px, 15vw, 40px);
+$padding-md-v4: clamp(23px, 15vw, 46px);
+$padding-md-v5: clamp(8px, 4vw, 32px);
+$padding-md-v6: clamp(16px, 15vw, 20px);
+$padding-md-v7: clamp(16px, 7vw, 75px);
+$padding-md-v8: clamp(30px, 7vw, 32px);
+$padding-md-v9: clamp(20px, 7vw, 24px);
+$padding-lg: clamp(21px, 11vw, 52px);
+$padding-lg: clamp(21px, 11vw, 52px);
+$padding-lg-v2: clamp(21px, 11vw, 64px);
+$padding-lg-v3: clamp(21px, 8vw, 55px);
+$padding-lg-v4: clamp(21px, 7vw, 48px);
+$padding-xl: clamp(24px, 13vw, 77px);
+$padding-xl-2: clamp(24px, 15vw, 209px);
+$padding-xl-3: clamp(24px, 15vw, 231px);
+$padding-xl-4: clamp(24px, 10vw, 124px);
+
+$margin-xs: clamp(5px, 4vw, 8px);
+$margin-xs-2: clamp(8px, 4vw, 17px);
+$margin-xs-3: clamp(20px, 9vw, 44px);
+$margin-xs-4: clamp(15px, 9vw, 24px);
+$margin-xs-5: clamp(17px, 9vw, 30px);
+$margin-xs-6: clamp(17px, 9vw, 26px);
+$margin-xs-7: clamp(6px, 3vw, 10px);
+$margin-lg: clamp(18px, 9vw, 32px);
+$margin-lg-v2: clamp(20px, 8vw, 47px);
+$margin-lg-v3: clamp(20px, 8vw, 49px);
+$margin-lg-v4: clamp(20px, 9vw, 52px);
+$margin-lg-v5: clamp(19px, 5vw, 64px);
+$margin-lg-v6: clamp(24px, 5vw, 64px);
+$margin-lg-v7: clamp(20px, 5vw, 40px);
+$margin-lg-v8: clamp(20px, 10vw, 56px);
+$margin-xl: clamp(32px, 11vw, 66px);
+$margin-xl-v2: clamp(32px, 9vw, 72px);
+$margin-xxl: clamp(30px, 17vw, 120px);
+
+$containerMainMargin: clamp(10px, 20vw, 20px);
+
+$breakpoints: (
+  phone-xs: 320px,
+  phone-sm: 375px,
+  phone: 480px,
+  phone-v2: 445px,
+  phablet: 600px,
+  phablet-v2: 630px,
+  tablet: 768px,
+  mid-tablet: 800px,
+  sm-table: 900px,
+  tablet-lg: 1024px,
+  desktop: 1280px,
+  desktop-md: 1330px,
+  desktop-lg: 1920px,
+  ultra: 2560px
+);
+
+@mixin media-max($breakpoints-name) {
+  @media (max-width: map-get($breakpoints, $breakpoints-name)) {
+    @content;
+  }
+}

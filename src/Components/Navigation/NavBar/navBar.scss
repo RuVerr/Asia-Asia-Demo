@@ -1,0 +1,38 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+// base-review-style _______________________________________________
+%base-border-bottom {
+  border-bottom: 3px solid $sky-bg;
+}
+// base-review-style _______________________________________________
+
+.navBar {
+  width: 100%;
+  @include flex(center, null, null, null, null);
+  // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+  margin-top: $margin-lg;
+  ul {
+    @include flex(space-between, null, null, null, 3px);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+    font-family: $font-regular;
+    li {
+      list-style: none;
+      .navLink {
+        border-bottom: 3px solid transparent;
+        padding: 0 $padding-md $padding-sm;
+        text-decoration: none;
+        font-size: $font-size-lg;
+        color: $shade-dark;
+        font-weight: 600;
+        transition: all 0.2s;
+        &:hover {
+          @extend %base-border-bottom;
+        }
+        &.active {
+          color: $sky;
+          @extend %base-border-bottom;
+        }
+      }
+    }
+  }
+}

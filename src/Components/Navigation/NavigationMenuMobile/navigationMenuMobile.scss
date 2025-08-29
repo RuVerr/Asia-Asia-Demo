@@ -1,0 +1,17 @@
+.navMobileContent {
+  width: 100%;
+  padding: 8px 0;
+  .navMobileList {
+    display: flex;
+    justify-content: space-evenly;
+    .navMobileListItem {
+      .navMobileLink {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.active path{
+  stroke: #3B6FEC;
+}

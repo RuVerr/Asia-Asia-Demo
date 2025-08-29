@@ -1,0 +1,28 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(tablet-lg) {
+  .cardAndPay {
+    @include flex(null, center, column, null, null);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+    .mainCard {
+      gap: 180px !important;
+    }
+    .pay,
+    .mainCard {
+      width: 100% !important;
+    }
+  }
+}
+
+@include media-max(phablet) {
+  .amountInDaily {
+    @include flex(null, null, column, null, 8px);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+  }
+}
+
+@include media-max(phablet-v2) {
+  .congratulations{
+    width: 100% !important;
+  }
+}

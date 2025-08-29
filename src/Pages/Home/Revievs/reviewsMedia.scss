@@ -1,0 +1,15 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(mid-tablet) {
+  .leavePopUp {
+    width: 100% !important;
+  }
+  .aboutAndInvest {
+    @include flex(null, center, column, null, 20px);
+    // default settings(flex) mutable arguments(justify-content, align-items, flex-direction, flex-wrap, gap)
+    .about,
+    .investWhy {
+      width: 100%;
+    }
+  }
+}

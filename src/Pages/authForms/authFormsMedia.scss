@@ -1,0 +1,23 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(sm-table) {
+  .signInFormContent,
+  .signUpFormContent,
+  .verefCodeFormContent,
+  .createAccFormContent {
+    @include flex(center !important, null, null, null, null);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+  }
+  .signInFormContentBg,
+  .signUpFormContentBg,
+  .verefCodeSignUpFormContentBg,
+  .createAccFormContentBg {
+    display: none;
+  }
+}
+
+@include media-max(phone) {
+  .form {
+    width: 100% !important;
+  }
+}

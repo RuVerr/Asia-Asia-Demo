@@ -1,0 +1,28 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(tablet-lg) {
+  .dailyProfitAndBalanceContent {
+    @include flex(null, center, column, null, null);
+    //flex, justify-content=null, align-items=null, flex=direction, flex-wrap=null, gap
+    .dailyProfitAndBalance {
+      width: 100% !important;
+    }
+  }
+}
+
+@include media-max(tablet-lg) {
+  .amountAndIncome {
+    @include flex(null, null, column, null, 8px);
+    //flex, justify-content=null, align-items=null, flex=direction, flex-wrap=null, gap
+  }
+}
+
+@include media-max(sm-table) {
+  .stockAndMethodContent {
+    @include flex(null, center, column, null, null);
+    //flex, justify-content=null, align-items=null, flex=direction, flex-wrap=null, gap
+    .withdrawalMethod {
+      width: 100% !important;
+    }
+  }
+}

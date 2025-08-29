@@ -1,0 +1,16 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.partners {
+  margin-top: $space-between-elements;
+  overflow: hidden;
+  h2 {
+    @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true); //size, font-family, color, copy
+  }
+  .partnerImages {
+    margin-top: $margin-xs-4;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: $space-lg-v3;
+  }
+}

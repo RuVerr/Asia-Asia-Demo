@@ -1,0 +1,28 @@
+@use "../../../GlobalStyle/variables" as *;
+.form {
+  .pVerefCode {
+    font-family: "Montserrat-Regular";
+    font-size: $font-size-lg-v2;
+  }
+  .verefFormInput {
+    margin-top: 100px !important;
+    .verefLabel{
+        text-align: center;
+        margin-bottom: 32px !important;
+    }
+    .inputsBox {
+      display: flex;
+      justify-content: center;
+      gap: $space-md-v2;
+      .verefInput {
+        text-align: center;
+        width: $width-lg;
+        height: 106px;
+        font-size: $font-size-xxl !important;
+      }
+      .input:focus::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

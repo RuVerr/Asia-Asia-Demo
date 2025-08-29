@@ -1,0 +1,119 @@
+@use "./color.scss" as *;
+
+@mixin bgConfig($width, $height: null) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: $width;
+  @if $height != null {
+    height: $height;
+  }
+}
+
+@mixin bgFixedAndCenter($zIndex: null) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @if ($zIndex != null) {
+    z-index: $zIndex;
+  }
+}
+
+@mixin bgFixedAndColor($zIndex: null) {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $shade-light-bg;
+  @if ($zIndex != null) {
+    z-index: $zIndex;
+  }
+}
+
+@mixin positionCenterSettings($position: null, $top: null, $left: null, $transform: null) {
+  @if ($position != null) {
+    position: $position;
+  }
+  @if ($top != null) {
+    top: $top;
+  }
+  @if ($left != null) {
+    left: $left;
+  }
+  @if ($transform != null) {
+    transform: $transform;
+  }
+}
+
+@mixin flex($justify: null, $align: null, $direction: null, $wrap: null, $gap: null) {
+  display: flex;
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $wrap != null {
+    flex-wrap: $wrap;
+  }
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin widthHeight($width, $height) {
+  @if $width != null {
+    width: $width;
+  }
+  @if $height != null {
+    height: $height;
+  }
+}
+
+@mixin fontSettings($fontSize, $fontFamily, $color, $copyText: false) {
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  color: $color;
+  @if $copyText {
+    user-select: text;
+  } @else {
+    user-select: none;
+  }
+}
+
+@mixin button($borderRadius: null, $bgColor: null, $color: null, $fontSize: null, $fontFamily: null, $border: null) {
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  @if $borderRadius != null {
+    border-radius: $borderRadius;
+  }
+  @if $bgColor != null {
+    background-color: $bgColor;
+  }
+  @if $color != null {
+    color: $color;
+  }
+  @if $fontSize != null {
+    font-size: $fontSize;
+  }
+  @if $fontFamily != null {
+    font-family: $fontFamily;
+  }
+  @if $border != null {
+    border: $border;
+  }
+}
+
+@mixin hoverButton($bgColor: null, $color: null) {
+  transition: 0.1s ease-out;
+  @if $bgColor != null {
+    background-color: $bgColor;
+  }
+  @if $color != null {
+    color: $color;
+  }
+}

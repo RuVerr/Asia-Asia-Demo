@@ -1,0 +1,14 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+@include media-max(phablet) {
+  .investHeader {
+    @include flex(center, center, column, null, null);
+    height: 100vh;
+  }
+  .investHeader::after {
+    content: "";
+    display: block;
+    background-image: url("/icon/arrowsBlue.svg");
+    @include bgConfig(74px, 62px);
+    margin-top: auto;
+  }
+}

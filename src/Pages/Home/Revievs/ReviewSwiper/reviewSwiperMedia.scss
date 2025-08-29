@@ -1,0 +1,9 @@
+@use "../../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phone-v2) {
+  .mySwiper {
+    .swiper-slide {
+      width: 100%;
+    }
+  }
+}

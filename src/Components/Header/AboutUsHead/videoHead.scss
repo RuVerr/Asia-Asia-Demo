@@ -1,0 +1,44 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.videoContent {
+  @include widthHeight(100%, 501px); // width, height
+  @include flex(center); //flex, justify-content, align-items=null, flex=direction=null, flex-wrap=null, gap=null
+  overflow: hidden;
+  position: relative;
+  background-color: $shade-dark-bg;
+  video {
+    opacity: 1;
+  }
+  img {
+    transition: all 1s;
+    position: absolute;
+    width: 307px;
+    left: 42%;
+    top: 32.5%;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+@keyframes openImg {
+  0% {
+    opacity: 0;
+    top: 32.5%;
+  }
+  50% {
+    opacity: 1;
+    top: 32.5%;
+  }
+  100% {
+    opacity: 1;
+    top: 12.5%;
+  }
+}
+@keyframes closeVideo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,52 @@
+@use "../../../GlobalStyle/variables.scss" as *;
+
+@include media-max(tablet-lg) {
+  .footer {
+    .footerHandle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .footerHandleBox1 {
+        display: inherit;
+        justify-items: center;
+        grid-template-columns: inherit;
+        grid-column: span 3;
+      }
+      .newsLetter {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+@include media-max(tablet) {
+  .footer {
+    .footerHandle {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .helpServiceList,
+      .navigationFootList{
+        justify-items: center;
+      }
+      .socialNetwork {
+        .pSocialNetwork {
+          display: none;
+        }
+        .socialLogos {
+          display: none;
+        }
+      }
+      .footerHandleBox1 {
+        display: inherit;
+        justify-items: center;
+        grid-template-columns: inherit;
+        grid-column: span 3;
+      }
+      .newsLetter {
+        grid-column: span 3;
+      }
+    }
+  }
+  .newsLetter {
+    display: none;
+  }
+}

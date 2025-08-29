@@ -1,0 +1,216 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+// base reviews style__________________________________
+
+%base-reviews-flex {
+  @include flex(space-between);
+  gap: 30px;
+  //flex, justify-content, align-items=null, flex=direction=null, flex-wrap=null, gap=null
+}
+
+// base reviews style__________________________________
+
+.dailyProfitAndBalanceMain {
+  padding-top: $padding-md-v4;
+  width: 100%;
+  .dailyProfitAndBalanceContent {
+    @extend %base-reviews-flex;
+    .dailyProfitAndBalance {
+      width: 635px;
+      border-radius: 30px;
+      background-color: $neutral-light;
+      box-shadow: 1px 0px 20px -10px;
+      padding: $padding-md-2 $padding-md-v5;
+      .amount1,
+      .amount2 {
+        @include fontSettings($font-size-md, $font-regular, $shade-dark); //size, font-family, color, copy
+      }
+      .balance {
+        .amountAndHistory {
+          @extend %base-reviews-flex;
+        }
+      }
+      .dailyProfit,
+      .balance {
+        @include flex(null, null, column, null, 100px);
+        //flex, justify-content=null, align-items=null, flex=direction, flex-wrap=null, gap
+      }
+      .titleAndButton {
+        @include flex(space-between, center);
+        font-family: $font-regular;
+        .titleDailyProfitAndBalance {
+          @include fontSettings($font-size-md-3, $font-medium, $shade-dark, false) //size, font-family, color, copy
+        }
+      }
+    }
+  }
+}
+
+.stockAndMethod {
+  width: 100%;
+  margin-top: $margin-lg-v3;
+  .stockAndMethodContent {
+    @include flex(null, null, null, null, 20px);
+    //flex, justify-content=null, align-items=null, direction=null, flex-wrap=null, gap
+    .yourStock {
+      width: 100%;
+      .stockTitle {
+        margin-bottom: $margin-xs-4;
+        @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true); //size, font-family, color, copy
+      }
+      .yourStockBox {
+        @include widthHeight(null, 453px);
+        @include flex(center, center); //flex, justify-content, align-items, direction=null, flex-wrap=null, gap=null
+        overflow: scroll;
+        background-color: $stone-bg-v2;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 28px -7px;
+        .yourStockBoxInCard {
+          width: 100%;
+          @include flex(null, center, column, null, 32px);
+          //flex, justify-content=null, align-items, direction, flex-wrap=null, gap
+          .yourStockBoxCards {
+            @include flex(space-between, null, column, null, 32px);
+            //flex, justify-content, align-items=null, direction, flex-wrap=null, gap
+            @include bgConfig(90%, 216px); //width, height=null, repeat, position, size
+            border-radius: 30px;
+            padding: $padding-md-2 $padding-md-v5;
+            .cardTitleAndParagraph,
+            .amountAndIncome {
+              @include fontSettings($font-size-md-3, $font-medium, $neutral-light); //size, font-family, color, copy
+              @include flex(space-between);
+              //flex, justify-content, align-items=null, direction=null, flex-wrap=null, gap=null
+            }
+            .cardTitleAndParagraph {
+              display: block;
+              .cardTitle {
+                font-size: 20px;
+              }
+              .pCard {
+                font-family: "Montserrat-Regular";
+              }
+            }
+          }
+        }
+        .stock {
+          position: relative;
+          @include flex(center, center, column);
+          //flex, justify-content, align-items, direction, flex-wrap=null, gap=null
+          @include widthHeight(100%, 100%);
+          .pStock {
+            @include fontSettings($font-size-xxl, $font-bold, $stone, false);
+          }
+          .stockButton {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .withdrawalMethod {
+      width: 417px;
+      .withdrawalMethodTitle {
+        @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true); //size, font-family, color, copy
+      }
+      .binanceIdTitle {
+        @include fontSettings($font-size-md, $font-medium, $shade-dark, true); //size, font-family, color, copy
+      }
+      .binanceIdAmountBox {
+        @include flex(space-between);
+        // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+        .binanceIdAmount {
+          @include fontSettings($font-size-md, $font-regular, $shade-dark, true); //size, font-family, color, copy
+          margin-top: 10px;
+        }
+      }
+      .withdrawalMethodContent {
+        margin-top: $margin-xs-4;
+        padding: $padding-md-v5 $padding-md-v5 $padding-md-2 $padding-md-v5;
+        box-shadow: 0px 0px 31px -13px;
+        border-radius: 20px;
+        .binanceLogoBox {
+          width: 100%;
+          margin-bottom: 48px;
+          @include flex(center);
+          // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+        }
+        .withdrawalMethodTitle {
+          @include fontSettings($font-size-md, $font-medium, $shade-dark, true); //size, font-family, color, copy
+          margin-bottom: $margin-xs;
+        }
+        .pWithdrawalMethod {
+          @include fontSettings($font-size-md, $font-regular, $shade-dark, true); //size, font-family, color, copy
+          margin-bottom: $margin-xs-2;
+        }
+        .binanceId {
+          @include flex(null, null, column, null, 10px);
+          @include fontSettings($font-size-md, $font-medium, $shade-dark, true); //size, font-family, color, copy
+          .binanceIdInput {
+            @include fontSettings($font-size-md, $font-medium, $shade-dark, true);
+            padding: $padding-sm-v2 $padding-md-v6;
+            border-radius: 20px;
+            border: 1px solid $stone-bg-v3;
+          }
+          .binanceIdButton {
+            margin-top: $margin-lg-v8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bgFocus {
+  @include bgFixedAndColor(99);
+  // default setting (fixed,inset: 0,width,height,background-color: #00000080) mutable argument(z-index)
+}
+.withdrawPopUp {
+  @include bgFixedAndCenter(100);
+  // default setting (fixed,top: 50%, left: 50% , transform: translate(-50%, -50%), mutable argument(z-index)
+  background-color: $neutral-light-bg;
+  padding: 0 $space-lg-v2;
+  border-radius: 50px;
+  text-align: center;
+  .withdrawPopUpClose {
+    margin-top: $space-lg-v2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 100%;
+  }
+  .withdrawPopUpTitle {
+    margin-bottom: $space-md-v3;
+    @include fontSettings($font-size-xl-v2, $font-regular, $sky, true); //size, font-family, color, copy
+  }
+  .withdrawAmountBox {
+    margin-bottom: $space-md-v3;
+    .withdrawAmountTitle {
+      margin-bottom: $space-md-v5;
+      @include fontSettings($font-size-xl-v2, $font-regular, $shade-dark, true); //size, font-family, color, copy
+    }
+    .withdrawAmount {
+      @include fontSettings($font-size-xl-v5, $font-medium, $shade-dark, true); //size, font-family, color, copy
+      display: block;
+      margin-bottom: $space-md-v2;
+    }
+    .pWithdraw {
+      @include fontSettings($font-size-lg-v2, $font-regular, $shade-dark, true); //size, font-family, color, copy
+    }
+  }
+  .pAvailable,
+  .pAvailableAmount {
+    margin-bottom: 8px;
+    @include fontSettings($font-size-lg-v2, $font-regular, $stone-v2, false); //size, font-family, color, copy
+  }
+  .pAvailableAmount {
+    margin-bottom: $space-md-v3;
+  }
+  .withdrawPopUpButton {
+    @include button(30px, $stone-bg, $neutral-light, $font-size-md, $font-medium, none);
+    // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+    width: 100%;
+    user-select: none;
+    padding: $padding-sm-v2 0;
+    margin-bottom: $space-lg-v2;
+  }
+}

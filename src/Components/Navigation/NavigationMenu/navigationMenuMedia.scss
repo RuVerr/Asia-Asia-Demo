@@ -1,0 +1,98 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phablet) {
+  .navigationMenu {
+    justify-content: space-between;
+    height: 66px;
+    .userNameAndFname {
+      display: none;
+    }
+    .rightNav {
+      display: none;
+    }
+    .leftNav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .burgerNav {
+      display: flex;
+      .burgerMenuBtn {
+        cursor: pointer;
+        position: relative;
+        @include widthHeight(24px, 24px);
+        background-color: transparent;
+        border: none;
+        .burgerLine {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .burgerLine:first-child {
+          top: -6px;
+        }
+        .burgerLine:last-child {
+          top: 6px;
+        }
+      }
+    }
+    .bgFocus {
+      @include bgFixedAndColor(null);
+    }
+    .burgerMenuList {
+      display: block;
+      position: fixed;
+      height: 100%;
+      width: 209px;
+      top: 65px;
+      left: 0;
+      z-index: 100;
+      background-color: $neutral-light;
+      transform: translateX(-220px);
+      .navBar {
+        justify-content: flex-start;
+        margin-left: 10px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          li {
+            a {
+              padding: 0 10px 5px 0;
+              font-family: $font-medium;
+            }
+            a:focus {
+              color: $sky;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.burgerAnimActive {
+  animation: burgerAnimActive 0.5s forwards;
+}
+
+.burgerAnimDeactivate {
+  animation: burgerAnimDeactivate 0.5s forwards;
+}
+
+@keyframes burgerAnimActive {
+  from {
+    transform: translateX(-220px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes burgerAnimDeactivate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-220px);
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+.ourJourney {
+  padding-top: $padding-md-v4;
+  .ourJourneyTitle {
+    font-size: $font-size-md;
+    color: $stoneGray;
+    font-family: $font-regular;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: $margin-xl-v2;
+  }
+  .ourJourneyCardMain {
+    @include flex(flex-start);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap=null);
+    margin-bottom: 40px;
+  }
+  .ourJourneyCardMain:nth-child(odd) {
+    @include flex(flex-end);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap=null);
+  }
+  .ourJourneyCard {
+    max-width: 526px;
+    .ourJourneyCardImg {
+      border-radius: 5%;
+    }
+    .ourJourneyCardTitle {
+      font-family: $font-bold;
+      font-size: $font-size-xxl;
+    }
+    .pOurJourneyCard {
+      font-family: $font-regular;
+      font-size: $font-size-md;
+      color: $stoneGray;
+    }
+    .ourJourneyCardImg,
+    .ourJourneyCardTitle {
+      margin-bottom: 8px;
+    }
+  }
+}

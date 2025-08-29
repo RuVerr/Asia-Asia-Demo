@@ -1,0 +1,41 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.homeHeader {
+  padding: 54px clamp(16px, 8vw, 228px) 54px clamp(16px, 5vw, 75px);
+  background-image: url("../../../images/headerBack.png");
+  @include bgConfig(100%, null); //width, height=null, repeat, position, size
+  @include flex(space-between, center);
+  //flex, justify-content, align-items, flex=direction=null, flex-wrap=null, gap=null
+  color: $neutral-light;
+  .bigLogo {
+    width: 100%;
+    @include flex(center);
+    //flex, justify-content, align-items=null, flex=direction=null, flex-wrap=null, gap=null
+    padding: $space-xl 0;
+  }
+  .leftHeader {
+    width: 675px;
+    .headBtn::after {
+      content: attr(data-text-v1);
+    }
+    .headBtnSignIn{
+      display: none;
+    }
+    h1 {
+      width: 90%;
+      @include fontSettings($font-size-xxl, $font-bold, $neutral-light, true); //size, font-family, color, copy
+      margin-bottom: $margin-xs-2;
+    }
+    p {
+      @include fontSettings($font-size-xl, $font-regular, $neutral-light, true); //size, font-family, color, copy
+    }
+    span {
+      display: block;
+      @include fontSettings($font-size-xl, $font-bold, $neutral-light, true); //size, font-family, color, copy
+      margin: 8px 0 $margin-lg-v5 0;
+    }
+  }
+  img {
+    width: 290px;
+  }
+}

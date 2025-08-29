@@ -1,0 +1,29 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@use "./InvestPagesOne/investPagesOne.scss";
+@use "./InvestPagesTwo/investPagesTwo.scss";
+
+.investPagesOne,
+.investPagesTwo {
+  box-shadow: inset 0px 12px 20px -22px;
+  padding-top: $space-lg;
+  .fromButton {
+    @include flex(null, null, null, null, 10px);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap=null);
+    margin-bottom: 35px;
+    .investPagesOneFromButton,
+    .investPagesTwoFromButton,
+    .thisLocationButton,
+    .active {
+      @include button(null, transparent, $shade-dark, $font-size-lg-v2, $font-regular, none);
+      // default settings (cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments (border-radius, background-color, color, font-size, font-family, border)
+      &:hover {
+        @include hoverButton(null, $sky-bg);
+        // default settings (transition: 0.1s ease-out;) mutable arguments (background-color, color)
+      }
+    }
+    .active {
+      color: $sky;
+    }
+  }
+}

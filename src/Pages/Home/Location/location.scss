@@ -1,0 +1,20 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.locations {
+  background-image: url("../../../images/locationBack.png");
+  @include bgConfig(100%, null); //width, height=null, repeat, position, size
+  color: $neutral-light;
+  padding: $padding-md-v5 0;
+  margin-top: $space-between-elements;
+  .locitem {
+    @include flex(null, center, null, null, 32px);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+    margin-bottom: $margin-lg-v3;
+    img {
+      @include widthHeight(22px, 32px);
+    }
+    h4 {
+      @include fontSettings($font-size-xl, $font-bold, $neutral-light, true); //size, font-family, color, copy
+    }
+  }
+}

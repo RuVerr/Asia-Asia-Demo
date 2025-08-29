@@ -1,0 +1,162 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.investPageTwoContent {
+  .cardAndPay {
+    width: 100%;
+    @include flex(null, null, null, null, 20px);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+    .mainCard {
+      @include flex(null, null, column, null, 506px);
+      // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+      @include bgConfig(744px);
+      padding: $padding-md-v8 $padding-md-v9;
+      border-radius: 60px;
+      .mainCardTitle,
+      .amount,
+      .daily {
+        @include fontSettings($font-size-xl-v2, $font-medium, $neutral-light);
+        //size, font-family, color, copy
+      }
+      .amountInDaily {
+        @include flex(space-between);
+        // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+      }
+    }
+    .pay {
+      box-shadow: 0px 0px 18px -4px;
+      border-radius: 20px;
+      width: 526px;
+      padding: $space-lg-4;
+      .payBinanceImgBox {
+        @include flex(center);
+        // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+        margin-bottom: $space-lg-v2;
+      }
+      .payInfo {
+        .pPayTitle {
+          @include fontSettings($font-size-md-3, $font-medium, $shade-dark, true);
+          //size, font-family, color, copy
+          margin-bottom: 8px;
+        }
+        .paySpanInfo {
+          display: block;
+          @include fontSettings($font-size-md, $font-regular, $shade-dark, true);
+          //size, font-family, color, copy
+          margin-bottom: $margin-xs-2;
+        }
+        .paySpanInfo:last-child {
+          margin-bottom: $margin-xs-6;
+        }
+      }
+    }
+    .screenShotAndQR {
+      margin-bottom: 24px;
+      .screenShotAndQRTitle {
+        @include fontSettings($font-size-md-3, $font-medium, $shade-dark, true);
+        //size, font-family, color, copy
+        margin-bottom: $margin-xs-2;
+      }
+      .screenshotIconAndQr {
+        @include flex(null, null, null, nowrap, 0);
+        // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+        .screenshot {
+          display: inline-block;
+          overflow: hidden;
+          @include widthHeight(320px, 122px);
+          .screenshotInput {
+            display: none;
+          }
+          .screenshotIconBox {
+            @include flex(center, center, null, null, 0);
+            // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+            height: 100%;
+            background-color: #dedede4f;
+            .screenshotIconImg {
+              width: 24px;
+            }
+          }
+          .screenshotImage {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .checkboxAndButton {
+      @include flex(null, null, column, null, 18px);
+      cursor: pointer;
+      // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+      .customCheckbox {
+        @include fontSettings($font-size-md, $font-regular, $shade-dark);
+        //size, font-family, color, copy
+        .customCheckboxBox {
+          @include flex(null, center, null, null, 8px);
+          // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+          .checkboxInput {
+            display: none;
+          }
+          .customSpan {
+            @include widthHeight(24px, 24px);
+            display: block;
+            position: relative;
+            border: 2px solid #3b6fec;
+            border-radius: 5px;
+            transition: 0.2s;
+            flex-shrink: 0;
+          }
+
+          .customSpan:hover {
+            background-color: #598dff;
+          }
+          .checkboxInput:checked + .customSpan::after {
+            content: "";
+            display: inline-block;
+            @include widthHeight(24px, 24px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            background-image: url("/icon/checkbox.svg");
+            @include bgConfig(null, null);
+          }
+          .formLink {
+            @include fontSettings($font-size-md, $font-regular, $sky);
+            //size, font-family, color, copy
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+  .bgFocus {
+    @include bgFixedAndColor(99);
+  }
+  .congratulations {
+    @include flex(null, center, column, null, null);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+    @include widthHeight(622px, null);
+    @include bgFixedAndCenter(100); // mutable argument(z-index)
+    padding: 0 $padding-xl-4;
+    background-color: #ffffff;
+    padding: $padding-lg-v3 $padding-xl-4;
+    border-radius: 30px;
+    .congratulationsImg {
+      width: 108px;
+      margin-bottom: $space-md-v2;
+    }
+    .congratulationsTitle {
+      @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true);
+      //size, font-family, color, copy
+      margin-bottom: $space-md-v4;
+    }
+    .pCongratulations {
+      @include fontSettings($font-size-md, $font-regular, $shade-dark, true);
+      //size, font-family, color, copy
+      text-align: center;
+      margin-bottom: $space-md-v2;
+      .spanCongratulations {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+// base-review-style _______________________________________________
+
+%base-review-button {
+  width: 100%;
+  @include button(20px, $stone, $neutral-light, $font-size-md, $font-regular, none);
+  // (default - pointer, 0.1s ease-in) / border, bgColo, color, fontSize, fontFamily, border
+  padding: 14px 0;
+  margin-top: $space-md-v3;
+}
+
+%base-review-font {
+  @include fontSettings($font-size-xl-v4, $font-medium, $shade-dark, true); //size, font-family, color, copy
+}
+
+// base-review-style _______________________________________________
+
+.reviews {
+  margin-top: $space-between-elements;
+  @extend %base-review-font; //size, font-family, color, copy
+  .reviewBox {
+    .bgFocus {
+      @include bgFixedAndColor(99); // z-index = 99
+    }
+    .leavePopUp {
+      @include bgFixedAndCenter(); //fixed, top: 50%, left: 50%, translate(-50%, -50%);
+      width: 630px;
+      padding: $padding-lg-v3 $padding-lg-v4;
+      background-color: $neutral-light-bg;
+      z-index: 100;
+      border-radius: 30px;
+      .leaveTitleAndClose {
+        @include flex(
+          space-between
+        ); //flex, justify-content, align-items=null, flex=direction=null, flex-wrap=null, gap=null
+        .leaveTitle {
+          @extend %base-review-font; //size, font-family, color, copy
+        }
+        .closeLeave {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+      .titleInputAndStar {
+        margin: $margin-lg-v7 0;
+        .titleInputAndStarTitle {
+          display: block;
+          @include fontSettings($font-size-md-3, $font-regular, $shade-dark, true); //size, font-family, color, copy
+          margin-bottom: 14px;
+        }
+        .leaveInput {
+          width: 100%;
+          border: 1px solid $stone-bg;
+          font-size: $font-size-md;
+          padding: $padding-sm-v2 $padding-md-v6;
+          outline: none;
+          border-radius: 30px;
+          margin-bottom: $margin-xs-4;
+        }
+        .starButton {
+          background-color: transparent;
+          border: none;
+          margin-right: 10px;
+        }
+        .starButton:last-child {
+          margin-right: 0;
+        }
+        .titleInputAndStarFormButton,
+        .titleInputAndStarFormButtonActive {
+          @extend %base-review-button;
+        }
+        .titleInputAndStarFormButtonActive {
+          background-color: $sky-bg;
+          &:hover {
+            @include hoverButton($sky-light-bg, null); // (default - 0.1s ease-in) / bgColor, color = null
+          }
+        }
+      }
+    }
+  }
+}
+
+.aboutAndInvest {
+  width: 100%;
+  margin-top: $margin-lg-v3;
+  @include flex(null, null, null, null, 32px);
+  //flex, justify-content = null, align-items=null, flex=direction=null, flex-wrap=null, gap=null
+  .about,
+  .investWhy {
+    width: 48%;
+    text-align: center;
+    h2 {
+      @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true); //size, font-family, color, copy
+    }
+    p {
+      margin-top: $margin-xs-2;
+      @include fontSettings($font-size-lg-v3, $font-regular, $shade-dark, true); //size, font-family, color, copy
+    }
+  }
+}

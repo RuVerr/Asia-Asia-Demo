@@ -1,0 +1,148 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+// base reviews style__________________________________
+
+%positionCenter {
+  @include positionCenterSettings(absolute, 50%, 50%, translate(-50%, -50%));
+  // mutable arguments (position, top, left, transform)
+}
+
+// base reviews style__________________________________
+
+.investPagesOne {
+  .investPagesOneContent {
+    .fromButton {
+      @include flex(null, null, null, null, 10px);
+      // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+      margin-bottom: 35px;
+      .investPagesOneFromButton,
+      .thisLocationButton,
+      .active {
+        @include button(null, transparent, $shade-dark, $font-size-lg-v2, $font-regular, none);
+        // default setting (cursor: pointer;, transition: 0.1s ease-in;) mutable arguments (border-radius, background-color, color, font-size, font-family, border)
+        &:hover {
+          @include hoverButton(null, $sky-bg);
+        }
+      }
+      .active {
+        color: $sky-bg;
+      }
+    }
+
+    .investPagesOneContentInfo {
+      .mainCard {
+        @include flex(null, null, column, null, 314px);
+        // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+        @include bgConfig(100%);
+        // default settings (background-repeat,background-position, background-size) mutable arguments (width, height)
+        border-radius: 20px;
+        padding: $padding-md-2 $padding-md-v5;
+        margin-bottom: $space-lg-4;
+        .mainCardTop {
+          @include flex(space-between, center);
+          // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+          .mainCardTitle {
+            @include fontSettings($font-size-xl-v2, $font-regular, $neutral-light, false);
+            //size, font-family, color, copy
+          }
+          .investPagesOneButton {
+            @include button(20px, $sky-bg, $neutral-light, $font-size-md, $font-regular, none);
+            // default settings (cursor: pointer;, transition: 0.1s ease-in;) mutable arguments (border-radius, background-color, color, font-size, font-family, border)
+            padding: $padding-sm-v2 $padding-md-2;
+            white-space: nowrap;
+            &:hover {
+              @include hoverButton($sky-light-bg);
+            }
+          }
+        }
+        .mainCardBottom {
+          @include flex(space-between);
+          // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+          .mainCardTopPrice,
+          .mainCardTopIncome {
+            @include fontSettings($font-size-xl-v2, $font-regular, $neutral-light); //size, font-family, color, copy
+          }
+        }
+      }
+    }
+
+    .profitAndImportant {
+      @include flex(space-between);
+      // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+      margin-top: $space-lg-4;
+
+      .profit {
+        .profitTitle {
+          @include fontSettings($font-size-xl-v4, $font-bold, $shade-dark, true);
+          //size, font-family, color, copy
+          text-align: center;
+          margin-bottom: $margin-xs-5;
+        }
+        .profitContent {
+          --var-distancesBetweenTheElements: clamp(16px, 4vw, 48px);
+          @include flex(null, center, null, null, var(--var-distancesBetweenTheElements));
+          // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+          .profitCircle {
+            --varCircleWidthInHeight: clamp(170px, 19vw, 300px);
+            @include widthHeight(var(--varCircleWidthInHeight), var(--varCircleWidthInHeight));
+            position: relative;
+            background-color: $stone-bg;
+            border-radius: 50%;
+            .blueResult {
+              --angle: 0deg;
+              background: conic-gradient(#4d5bf9 0% var(--angle), #e0e0e0 0%);
+              @include widthHeight(inherit, inherit);
+              border-radius: inherit;
+            }
+            .circleInCircle {
+              @extend %positionCenter;
+              // mutable arguments (position, top, left, transform)
+              // settings at the beginning of the document
+              background-color: $neutral-light-bg;
+              @include widthHeight(87%, 87%);
+              border-radius: inherit;
+              .circleAmount {
+                @include fontSettings($font-size-xxl, $font-bold, $sky);
+                //size, font-family, color, copy
+                @extend %positionCenter;
+                // mutable arguments (position, top, left, transform)
+                // settings at the beginning of the document
+              }
+            }
+          }
+          .profitButton {
+            @include button(none, transparent, $sky-v2, $font-size-md, $font-regular, none);
+            // default settings (cursor: pointer;, transition: 0.1s ease-in;) mutable arguments (border-radius, background-color, color, font-size, font-family, border)
+
+            --var-distancesBetweenTheElements-V2: clamp(22px, 3vw, 35px);
+            @include flex(null, flex-start, column, null, var(--var-distancesBetweenTheElements-V2));
+            // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent;
+          }
+        }
+      }
+      .important {
+        width: 635px;
+        .importantTitle {
+          @include fontSettings($font-size-xl-v4, $font-bold, $shade-dark, true);
+          //size, font-family, color, copy
+          text-align: center;
+          margin-bottom: $space-lg-4;
+        }
+        .pImportant {
+          @include fontSettings($font-size-md, $font-regular, $shade-dark, true);
+          //size, font-family, color, copy
+        }
+        .importantButton {
+          @include button(30px, $sky-bg, $neutral-light, $font-size-md, $font-regular, none);
+          // default settings (cursor: pointer;, transition: 0.1s ease-in;) mutable arguments (border-radius, background-color, color, font-size, font-family, border)
+          width: 100%;
+          padding: $padding-sm-v2 0;
+          margin-top: $space-md-v3;
+        }
+      }
+    }
+  }
+}

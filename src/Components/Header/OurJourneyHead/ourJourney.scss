@@ -1,0 +1,14 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.ourJourneyHead {
+  @include bgConfig(100%, null); //width, height=null, repeat, position, size
+  background-image: url("../../../images/OurJourneyImages/our-jurney-header.png");
+  color: $neutral-light;
+  text-align: center;
+  .ourJourneyTitle {
+    padding: $padding-xl-3 0;
+    background-color: $shade-light-bg;
+    font-family: "Montserrat-Bold";
+    @include fontSettings($font-size-xxl, $font-bold, $neutral-light, true); //size, font-family, color, copy
+  }
+}

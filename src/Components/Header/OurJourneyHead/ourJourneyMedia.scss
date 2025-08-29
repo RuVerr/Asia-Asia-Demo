@@ -1,0 +1,20 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phone) {
+  .ourJourneyHead {
+    position: relative;
+    .ourJourneyTitle {
+      padding: 236px 0;
+    }
+  }
+  .ourJourneyHead::after {
+    content: "";
+    display: block;
+    background-image: url("/icon/arrowsWhite.svg");
+    @include bgConfig(74px, 62px);
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

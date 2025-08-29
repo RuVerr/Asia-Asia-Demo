@@ -1,0 +1,14 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phablet) {
+  .invest_withdraw {
+    @include flex(null, null, column, null, 24px);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+  }
+}
+
+@include media-max(phablet-v2) {
+  .invest_cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

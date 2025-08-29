@@ -1,0 +1,16 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phone) {
+  .videoContent {
+    height: 504px;
+    position: relative;
+  }
+  .videoContent::after {
+    content: "";
+    display: block;
+    background-image: url("/icon/arrowsBlue.svg");
+    @include bgConfig(74px, 62px);
+    position: absolute;
+    bottom: 47px;
+  }
+}

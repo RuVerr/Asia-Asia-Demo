@@ -1,0 +1,30 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.benefist {
+  row-gap: 48px;
+  margin-top: $margin-xl;
+  h2 {
+    @include fontSettings($font-size-xl-v4, $font-medium, $shade-dark, true); //size, font-family, color, copy
+  }
+  .benefistList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-lg $space-md;
+    align-items: baseline;
+    padding: $padding-lg 0 0 0;
+    .benefistItem {
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      h3 {
+        @include fontSettings($font-size-lg, $font-medium, $shade-dark, true); //size, font-family, color, copy
+        margin: $margin-xs-2 0 $margin-xs;
+      }
+      p {
+        max-width: 356px;
+        @include fontSettings($font-size-md, $font-regular, $shade-dark, true); //size, font-family, color, copy
+      }
+    }
+  }
+}

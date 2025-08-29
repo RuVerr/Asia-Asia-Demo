@@ -1,0 +1,12 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(mid-tablet) {
+  .ourTeamCard {
+    @include flex(null, center, column, null, null);
+    text-align: center;
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+    .peopleImg {
+      width: 100%;
+    }
+  }
+}

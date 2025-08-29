@@ -1,0 +1,9 @@
+@use "../../../GlobalStyle/variables" as *;
+
+@include media-max(phablet) {
+  .benefist {
+    .benefistList {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

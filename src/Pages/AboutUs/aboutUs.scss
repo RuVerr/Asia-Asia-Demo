@@ -1,0 +1,24 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+.aboutUsContent {
+  @include flex(null, center, column, null, 32px);
+  // default setting(flex) mutable arguments(justify-content, align-items, flex-direction, flex-wrap, gap)
+  text-align: center;
+  padding-top: 48px;
+  .aboutUsTitle {
+    max-width: 812px;
+    @include fontSettings($font-size-xxl, $font-bold, $shade-dark, false);
+    // ont-size, font-family, color, copy
+    text-transform: uppercase;
+  }
+  .pAboutUsContent {
+    display: grid;
+    gap: 24px;
+    font-family: $font-regular;
+    .pAboutUs {
+      max-width: 1031px;
+      font-size: $font-size-md-3;
+      font-weight: 400;
+    }
+  }
+}

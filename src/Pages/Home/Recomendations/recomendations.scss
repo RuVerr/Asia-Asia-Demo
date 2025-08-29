@@ -1,0 +1,24 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.recomendation {
+  margin-top: $space-between-elements;
+  .recomendationTitle {
+    width: 100%;
+    @include flex(space-between, center);
+    // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+    h2 {
+      @include fontSettings($font-size-xl-v2, $font-medium, $shade-dark, true); //size, font-family, color, copy
+    }
+    a {
+      @include fontSettings($font-size-md, $font-regular, $sky, true); //size, font-family, color, copy
+    }
+  }
+  .recomendationCards {
+    margin-top: $margin-xs-4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-content: space-between;
+    gap: 32px 25px;
+  }
+}

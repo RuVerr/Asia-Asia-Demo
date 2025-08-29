@@ -1,0 +1,195 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+.signIn {
+  @include button(20px, $neutral-light, $sky-bg, $font-size-lg-v2, $font-regular);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border);
+  padding: 8px 45px;
+  border: 1px solid $sky-bg;
+  white-space: nowrap;
+  &:hover {
+    @include hoverButton($sky-light-bg, $neutral-light);
+  }
+}
+
+.signUp {
+  @include button(20px, $sky-bg, $neutral-light, $font-size-lg-v2, $font-regular);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  padding: 7px 43px;
+  border: none;
+  white-space: nowrap;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.signInUpForm,
+.signInInForm,
+.signUpMail,
+.signUpVerifyButton,
+.signUpCreateAccountButton {
+  @include button(20px, $neutral-light-bg, $sky, 16px, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  padding: 14px;
+  border: 1px solid $sky-light-bg;
+  white-space: nowrap;
+  &:hover {
+    @include hoverButton($sky-light-bg, $neutral-light);
+  }
+}
+
+.signInInForm {
+  background-color: $stone-bg;
+  color: $neutral-light;
+  margin-top: 10px;
+  border: none;
+}
+
+.signUpMail,
+.signUpVerifyButton,
+.signUpCreateAccountButton {
+  background-color: $stone-bg;
+  color: $neutral-light;
+  border: none;
+}
+
+.headBtn {
+  @include button(49px, $sky-bg, $neutral-light, $font-size-md, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  @include flex(center, center);
+  // default settings (flex), mutable arguments (justify-content=null, align-items=center, flex=direction=null, flex-wrap=null, gap)
+  width: 100%;
+  padding: $padding-md 0;
+  font-weight: bold;
+  border: none;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.headBtnSignIn {
+  @include button(49px, $neutral-light, $sky-bg, $font-size-md, $font-bold);
+  width: 100%;
+  padding: $padding-md 0;
+  font-weight: bold;
+  border: none;
+  margin-top: 16px;
+  &:hover {
+    @include hoverButton($sky-bg, $neutral-light);
+  }
+}
+
+.review {
+  @include button(49px, $sky-bg, $neutral-light, $font-size-md, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: $margin-lg;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.footerSubscribe {
+  @include button(100px, $sky-bg, $neutral-light, $font-size-lg-v2, $font-regular);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  margin-top: 12px;
+  padding: 13px 0;
+  border: none;
+  white-space: nowrap;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.successButton {
+  @include button(100px, $sky-bg, $neutral-light, $font-size-lg-v2, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  white-space: nowrap;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.investButton {
+  @include button(30px, $sky-bg, $neutral-light, $font-size-lg-v2, $font-bold);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  &:hover {
+    @include hoverButton($sky-light-bg, $neutral-light);
+  }
+}
+
+.withdrawButton {
+  @include button(30px, $neutral-light-bg, $sky, $font-size-lg-v2, $font-bold);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border)
+  &:hover {
+    @include hoverButton($sky-light-bg, $neutral-light);
+  }
+}
+
+.investButton,
+.withdrawButton {
+  width: 37%;
+  padding: 8px 0;
+  border: 1px solid #3b6fec;
+}
+
+.withdawHistoryClass {
+  cursor: pointer;
+  color: #3b6fec;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.stockButton {
+  @include button(20px, $sky-bg, $neutral-light, $font-size-lg-v2, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border);
+  @include widthHeight(719px, null);
+  border: none;
+  margin-bottom: 24px;
+  padding: 14px 0;
+  &:hover {
+    @include hoverButton($sky-light-bg, $neutral-light);
+  }
+}
+
+.binanceIdButton {
+  @include button(20px, $stone, $neutral-light, $font-size-lg-v2, $font-medium);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border);
+  border: none;
+  padding: 14px 0;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.pencilEditButton {
+  @include button(null, transparent, null, null, null);
+  border: none;
+}
+
+.formCheckBoxButton {
+  @include button(20px, $stone-bg, $neutral-light, $font-size-md, $font-medium, none);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border);
+  padding: 14px 0;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}
+
+.congratulationsButton {
+  @include button(30px, $sky-bg, $neutral-light, $font-size-md, $font-medium, none);
+  // default setting(cursor: pointer;, transition: 0.1s ease-in; ) mutable arguments(border-radius, background-color, color, font-size, font-family, border);
+  user-select: none;
+  padding: 14px 0;
+  width: 100%;
+  &:hover {
+    @include hoverButton($sky-light-bg);
+  }
+}

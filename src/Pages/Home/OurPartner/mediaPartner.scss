@@ -1,0 +1,30 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phablet) {
+  .partnerImages {
+    animation: scroll 20s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(579px);
+  }
+  to {
+    transform: translateX(-300vw);
+  }
+}
+
+@include media-max(phone-xs) {
+  .partnerImages {
+    animation: scroll-2 20s linear infinite;
+  }
+}
+@keyframes scroll-2 {
+  from {
+    transform: translateX(330px);
+  }
+  to {
+    transform: translateX(-450vw);
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+.invest {
+  width: 100%;
+  margin-top: $margin-lg-v6;
+  @include flex(center, center, column, null, null);
+  // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+  &_withdraw {
+    width: 100%;
+    @include flex(space-around, null, null, null, null);
+    // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+    text-align: center;
+    h2 {
+      @include fontSettings($font-size-xl-v4, $font-bold, $sky, true);
+      //size, font-family, color, copy
+      @include flex(null, null, column, 16px, null);
+      // default settings (flex) mutable arguments(justify-content, align-items, direction, flex-wrap=null, gap);
+    }
+  }
+  &_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 33px 14px;
+    margin-top: $margin-lg-v3;
+    justify-content: center;
+  }
+}

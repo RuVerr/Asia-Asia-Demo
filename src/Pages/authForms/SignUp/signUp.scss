@@ -1,0 +1,15 @@
+@use "../../../GlobalStyle/variables" as *;
+
+.form {
+  .formTitle {
+    margin-bottom: $margin-lg-v2;
+  }
+  .pSignUp {
+    font-family: "Montserrat-Regular";
+    font-size: $font-size-lg-v2;
+    padding: 0 20px;
+  }
+  .formInput {
+    margin-top: 156px;
+  }
+}

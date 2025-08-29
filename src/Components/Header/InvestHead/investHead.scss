@@ -1,0 +1,17 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.investHeader {
+  padding: $padding-xl-2 0;
+  @include bgConfig(100%, null); //width, height=null, repeat, position, size
+  background-image: url("../../../images/investBack.png");
+  text-align: center;
+  .investHeaderTitleBox {
+    h1 {
+      @include fontSettings($font-size-xxl, $font-medium, $neutral-light, true); //size, font-family, color, copy
+      letter-spacing: 0.3px;
+    }
+    span {
+      color: $sky;
+    }
+  }
+}

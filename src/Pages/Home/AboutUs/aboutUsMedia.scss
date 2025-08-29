@@ -1,0 +1,8 @@
+@use "../../../GlobalStyle/variables" as *;
+
+@include media-max(phablet){
+    .aboutUsHome{
+        display: flex;
+        justify-content: center;
+    }
+}

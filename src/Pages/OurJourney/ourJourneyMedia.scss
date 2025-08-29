@@ -1,0 +1,12 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phablet) {
+  .ourJourney {
+    .ourJourneyCardMain:nth-child(odd) {
+      display: block;
+    }
+    .ourJourneyCardImg {
+      width: 100%;
+    }
+  }
+}

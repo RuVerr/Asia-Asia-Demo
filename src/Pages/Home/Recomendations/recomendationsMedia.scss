@@ -1,0 +1,10 @@
+@use "../../../GlobalStyle/variables" as *;
+
+@include media-max(mid-tablet) {
+  .recomendation {
+    .recomendationCards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

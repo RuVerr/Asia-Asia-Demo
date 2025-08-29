@@ -1,0 +1,39 @@
+@use "../../../../GlobalStyle/mainScss.scss" as *;
+
+.userCard {
+  padding: $padding-md $padding-md-2;
+  border-radius: 13px;
+  box-shadow: 0 0 20px $shade-light-bg-v2;
+  border: 1px solid $shade-light-bg-v2;
+  .userData {
+    width: inherit;
+    @include flex(null, null, null, null, 24px);
+    //flex, justify-content=null, align-items=null, flex=direction=null, flex-wrap=null, gap
+    img {
+      @include widthHeight(60px, 60px);
+      border-radius: 50%;
+    }
+    .nameAndRating {
+      width: 100%;
+      p {
+        display: grid;
+        justify-content: start;
+        @include fontSettings($font-size-lg, $font-medium, $shade-dark); //size, font-family, color, copy
+        font-weight: 700;
+      }
+      .rating {
+        margin-top: 8px;
+        @include flex(flex-start, null, null, null, 9px);
+        //flex, justify-content, align-items=null, flex=direction=null, flex-wrap=null, gap
+        img {
+          @include widthHeight(18px, 18px);
+        }
+      }
+    }
+  }
+  .userInfo {
+    margin-top: $margin-xs-2;
+    text-align: left;
+    @include fontSettings($font-size-md, $font-regular, $shade-dark); //size, font-family, color, copy
+  }
+}

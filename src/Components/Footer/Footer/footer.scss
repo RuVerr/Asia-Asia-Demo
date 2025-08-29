@@ -1,0 +1,123 @@
+@use "../../../GlobalStyle/mainScss.scss" as *;
+
+.footer {
+  .footerHandle {
+    @include flex(space-between, flex-start, null, null, 16px);
+    //flex, justify-content, align-items, flex=direction=null, flex-wrap=null, gap=null
+    padding: $padding-md 0;
+    margin: $margin-lg-v4 0;
+    border-top: 1px solid $stone-bg;
+    border-bottom: 1px solid $stone-bg;
+    .footerHandleBox1 {
+      width: 100%;
+      display: inherit;
+      justify-content: inherit;
+      gap: 32px;
+    }
+    p {
+      @include fontSettings($font-size-lg-v2, $font-medium, $stoneGray, true); //size, font-family, color, copy
+    }
+
+    h3 {
+      @include fontSettings($font-size-md, $font-medium, $sky, true); //size, font-family, color, copy
+    }
+
+    .socialNetwork {
+      p {
+        margin-top: $margin-xs-2;
+        @include fontSettings($font-size-lg-v2, $font-medium, $stoneGray, true); //size, font-family, color, copy
+      }
+
+      .socialLogos {
+        @include flex(space-between, center, null, null, 16px);
+        //flex, justify-content, align-items, flex=direction=null, flex-wrap=null, gap=null
+        max-width: 120px;
+        margin-top: $margin-xs-4;
+      }
+    }
+
+    .helpService,
+    .navigationFoot {
+      .helpServiceListTitle,
+      .helpFootListTitle {
+        font-size: $font-size-md;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .active {
+        color: #3b6fec;
+      }
+
+      ul {
+        list-style: none;
+        display: grid;
+        gap: $space-md-v2;
+      }
+
+      a {
+        @include fontSettings($font-size-lg-v2, $font-regular, $stoneGray, true); //size, font-family, color, copy
+      }
+    }
+
+    .helpService {
+      width: 190px;
+    }
+
+    .navigationFoot {
+      width: 115px;
+    }
+
+    .newsLetter {
+      min-width: 310px;
+
+      h3 {
+        letter-spacing: 2px;
+      }
+
+      .newsLetter_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: $margin-xs-5;
+
+        label {
+          position: relative;
+          width: 100%;
+
+          input {
+            width: 100%;
+            min-height: 55px;
+            padding: $padding-md $padding-md $padding-md $padding-md-v4;
+            @include fontSettings($font-size-lg-v2, $font-medium, $stoneGray, true); //size, font-family, color, copy
+            border-radius: 42px;
+            outline: none;
+            border: 1px solid #e4e4e7;
+
+            &::placeholder {
+              @include fontSettings($font-size-lg-v2, $font-medium, $stone, true); //size, font-family, color, copy
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .privatePolicy {
+    @include flex(center, center, null, null, 40px);
+    //flex, justify-content, align-items, flex=direction=null, flex-wrap=null, gap=null
+    padding: 4px 0 $padding-md-v3;
+
+    a {
+      @include fontSettings($font-size-lg-v2, $font-regular, $stoneGray, true); //size, font-family, color, cop
+    }
+  }
+}

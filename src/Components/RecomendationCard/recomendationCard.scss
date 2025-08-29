@@ -1,0 +1,28 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+.recCard {
+  @include bgConfig(100%, null);
+  // default settings(background-repeat: no-repeat;, background-position: center;, background-size: cover;, width: $width;) mutable arguments (height)
+  padding: $padding-md-2 $padding-sm-v2;
+  color: $neutral-light;
+  border-radius: 25px;
+  cursor: pointer;
+  h2 {
+    @include fontSettings($font-size-xl, $font-medium, $neutral-light, false);
+    // font-size, font-family, color, copy
+  }
+  p {
+    @include fontSettings($font-size-md-3, $font-light, $neutral-light, false);
+    // font-size, font-family, color, copy
+  }
+  .priceAndProc {
+    margin-top: 93px;
+    @include flex(space-between);
+    // default settings(display: flex) mutable arguments(justify-content, align-items, flex-direction, flex-wrap, gap)
+    pre {
+      @include fontSettings($font-size-md-3, $font-medium, $neutral-light, false);
+      // font-size, font-family, color, copy
+      font-weight: 600;
+    }
+  }
+}

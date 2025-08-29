@@ -1,0 +1,8 @@
+@use "../../GlobalStyle/mainScss.scss" as *;
+
+@include media-max(phone) {
+  .priceAndProc {
+    @include flex(null, null, column, null, 8px);
+    // default settings(display: flex) mutable arguments(justify-content, align-items, flex-direction, flex-wrap, gap)
+  }
+}

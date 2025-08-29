@@ -1,0 +1,36 @@
+@use "./GlobalStyle/variables.scss" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+body {
+  padding-top: 65px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+header {
+  max-height: 501px;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  white-space: nowrap;
+}
+
+.container {
+  max-width: 1330px;
+  margin: auto;
+  padding: 0 16px;
+}
